@@ -1,28 +1,75 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route }            from 'react-router-dom';
+import { createStore }			from "redux";
+import { routes }           from "./router";
+import { Authentication }   from "./services/authen";
+import { LoginScreen }      from "./containers/login/login";
+import { rootReducer } 			from "./reducers/rootReducers";
+import './App.scss';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+
+	authen = new Authentication();
+
+	render() {
+
+		if (!this.authen.isLoggin()) {
+			return (
+				<LoginScreen></LoginScreen>
+			)
+		} else {
+			return (
+				<div className="wrapper">
+					
+					<div className="header">
+						{ routes.map((route, index) => (
+							<Route
+								key={ index }
+								path={ route.path }
+								exact={ route.exact }
+								component={ route.header }
+							/>
+						)) }
+					</div>
+
+					<div className="main">
+
+						<div className="aside-block">
+							{ routes.map((route, index) => (
+								<Route
+									key={ index }
+									path={ route.path }
+									exact={ route.exact }
+									component={ route.sidebar }
+								/>
+							)) }
+						</div>
+
+						<div className="content-block">
+							{ routes.map((route, index) => (
+								<Route
+									key={ index }
+									path={ route.path }
+									exact={ route.exact }
+									component={ route.component }
+								/>
+							)) }
+						</div>
+
+					</div>
+
+				</div>
+			);
+		}
+
+
+	}
+
 }
+
+const initialState = {};
+
+export const store = createStore(rootReducer, initialState,
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 export default App;
