@@ -14,7 +14,6 @@ export class Loading extends Component {
         loading: store.getState().loading
       });
     });
-    console.log(store.getState());
   }
 
   componentWillUnmount = () => {

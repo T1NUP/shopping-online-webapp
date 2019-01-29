@@ -16,9 +16,7 @@ export class Counter extends Component {
         incDecValue: store.getState().incDecValue
       });
     });
-    http.get('posts/1').then(data => {
-      console.log(data);
-    });
+    
   }
 
   componentWillUnmount = () => {
@@ -26,20 +24,19 @@ export class Counter extends Component {
   }
 
   increase = () => {
-    store.dispatch({
-      type: INCREASE,
-      payload: {
-        step: 2
-      }
+    http.get('posts/1').then(data => {
+      console.log(data);
+      store.dispatch({
+        type: INCREASE,
+        payload: { step: 2 }
+      });
     });
   }
 
   decrease = () => {
     store.dispatch({
       type: DECREASE,
-      payload: {
-        step: 2
-      }
+      payload: { step: 2 }
     });
   }
 

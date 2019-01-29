@@ -3,44 +3,117 @@ import { store } from '../App';
 import { SHOW_LOADING, HIDE_LOADING } from '../actions/actions';
 
 const HttpConfig = {
-  port: 4000,
-  baseURL: 'http://localhost:4000/'
+  baseURL: 'http://localhost:4000/',
+  headers: { 'Content-Type': 'application/json' }
 };
 
-const get = (url, headers = {}) => {
+const apiGet = (url, headers = {}) => {
   store.dispatch({
     type: SHOW_LOADING,
-    payload: {
-      loading: true
-    }
+    payload: { loading: true }
   });
-  console.log(store.getState());
   return new Promise((resolve, reject) => {
-    let header = Object.assign({}, { 'Content-Type': 'application/json' }, headers);
-    return axios.get(HttpConfig.baseURL + url, {
-      headers: header
-    }).then(data => {
+    let customHeader = Object.assign({}, HttpConfig, headers);
+    return axios.get(url, customHeader).then(data => {
       store.dispatch({
         type: HIDE_LOADING,
-        payload: {
-          loading: false
-        }
+        payload: { loading: false }
       });
-      console.log(store.getState());
       resolve(data);
     }, err => {
+      store.dispatch({
+        type: HIDE_LOADING,
+        payload: { loading: false }
+      });
+      console.log(err);
+      alert('Request fail, please contact with your administration!');
       reject(err);
     });
-  })
+  });
 }
 
-const post = (url, params, headers) => {
-  
+const apiPost = (url, params = {}, headers) => {
+  store.dispatch({
+    type: SHOW_LOADING,
+    payload: { loading: true }
+  });
+  return new Promise((resolve, reject) => {
+    let customHeader = Object.assign({}, HttpConfig, headers);
+    return axios.post(url, params, customHeader).then(data => {
+      store.dispatch({
+        type: HIDE_LOADING,
+        payload: { loading: false }
+      });
+      resolve(data);
+    }, err => {
+      store.dispatch({
+        type: HIDE_LOADING,
+        payload: { loading: false }
+      });
+      console.log(err);
+      alert('Request fail, please contact with your administration!');
+      reject(err);
+    });
+  });
 }
+
+const apiDelete = (url, headers) => {
+  store.dispatch({
+    type: SHOW_LOADING,
+    payload: { loading: true }
+  });
+  return new Promise((resolve, reject) => {
+    let customHeader = Object.assign({}, HttpConfig, headers);
+    return axios.delete(url, customHeader).then(data => {
+      store.dispatch({
+        type: HIDE_LOADING,
+        payload: { loading: false }
+      });
+      resolve(data);
+    }, err => {
+      store.dispatch({
+        type: HIDE_LOADING,
+        payload: { loading: false }
+      });
+      console.log(err);
+      alert('Request fail, please contact with your administration!');
+      reject(err);
+    });
+  });
+}
+
+
+const apiPut = (url, params = {}, headers) => {
+  store.dispatch({
+    type: SHOW_LOADING,
+    payload: { loading: true }
+  });
+  return new Promise((resolve, reject) => {
+    let customHeader = Object.assign({}, HttpConfig, headers);
+    return axios.put(url, params, customHeader).then(data => {
+      store.dispatch({
+        type: HIDE_LOADING,
+        payload: { loading: false }
+      });
+      resolve(data);
+    }, err => {
+      store.dispatch({
+        type: HIDE_LOADING,
+        payload: { loading: false }
+      });
+      console.log(err);
+      alert('Request fail, please contact with your administration!');
+      reject(err);
+    });
+  });
+}
+
 
 export const http = {
-  get: get,
-  post: post
+  get: apiGet,
+  post: apiPost,
+  delete: apiDelete,
+  put: apiPut
 }
 
 
