@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { store } from "../../App";
 import { DECREASE, INCREASE } from "../../actions/actions";
+import { http } from '../../services/http';
 import'./counter.scss';
 
 export class Counter extends Component {
@@ -14,6 +15,9 @@ export class Counter extends Component {
       this.setState({
         incDecValue: store.getState().incDecValue
       });
+    });
+    http.get('posts/1').then(data => {
+      console.log(data);
     });
   }
 

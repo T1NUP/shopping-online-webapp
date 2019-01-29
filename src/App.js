@@ -5,6 +5,7 @@ import { routes }           from "./router";
 import { Authentication }   from "./services/authen";
 import { LoginScreen }      from "./containers/login/login";
 import { rootReducer } 			from "./reducers/rootReducers";
+import { Loading } from './components/loading/loading';
 import './App.scss';
 
 class App extends Component {
@@ -31,6 +32,7 @@ class App extends Component {
 							/>
 						)) }
 					</div>
+					{/* END HEADER */}
 
 					<div className="main">
 
@@ -57,6 +59,9 @@ class App extends Component {
 						</div>
 
 					</div>
+					{/* END MAIN CONTENT */}
+
+					<Loading />
 
 				</div>
 			);
