@@ -13,8 +13,7 @@ const apiGet = (url, headers = {}) => {
     payload: { loading: true }
   });
   return new Promise((resolve, reject) => {
-    let customHeader = Object.assign({}, HttpConfig, headers);
-    return axios.get(url, customHeader).then(data => {
+    return axios.get(url, Object.assign({}, HttpConfig, headers)).then(data => {
       store.dispatch({
         type: HIDE_LOADING,
         payload: { loading: false }
@@ -32,14 +31,14 @@ const apiGet = (url, headers = {}) => {
   });
 }
 
-const apiPost = (url, params = {}, headers) => {
+const apiPost = (url, params = {}, headers = {}) => {
   store.dispatch({
     type: SHOW_LOADING,
     payload: { loading: true }
   });
   return new Promise((resolve, reject) => {
-    let customHeader = Object.assign({}, HttpConfig, headers);
-    return axios.post(url, params, customHeader).then(data => {
+    return axios.post(url, params, Object.assign({}, HttpConfig, headers)).then(data => {
+      console.log(data);
       store.dispatch({
         type: HIDE_LOADING,
         payload: { loading: false }
@@ -57,14 +56,13 @@ const apiPost = (url, params = {}, headers) => {
   });
 }
 
-const apiDelete = (url, headers) => {
+const apiDelete = (url, headers = {}) => {
   store.dispatch({
     type: SHOW_LOADING,
     payload: { loading: true }
   });
   return new Promise((resolve, reject) => {
-    let customHeader = Object.assign({}, HttpConfig, headers);
-    return axios.delete(url, customHeader).then(data => {
+    return axios.delete(url, Object.assign({}, HttpConfig, headers)).then(data => {
       store.dispatch({
         type: HIDE_LOADING,
         payload: { loading: false }
@@ -83,14 +81,13 @@ const apiDelete = (url, headers) => {
 }
 
 
-const apiPut = (url, params = {}, headers) => {
+const apiPut = (url, params = {}, headers = {}) => {
   store.dispatch({
     type: SHOW_LOADING,
     payload: { loading: true }
   });
   return new Promise((resolve, reject) => {
-    let customHeader = Object.assign({}, HttpConfig, headers);
-    return axios.put(url, params, customHeader).then(data => {
+    return axios.put(url, params, Object.assign({}, HttpConfig, headers)).then(data => {
       store.dispatch({
         type: HIDE_LOADING,
         payload: { loading: false }

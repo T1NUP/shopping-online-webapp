@@ -1,9 +1,52 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode1" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "products": [
+    {
+      "id": 1,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "id": 2,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "id": 3,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "id": 4,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "id": 5,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "id": 6,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "id": 7,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "id": 8,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    }
+  ]
 }

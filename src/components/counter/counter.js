@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { store } from "../../App";
 import { DECREASE, INCREASE } from "../../actions/actions";
-import { http } from '../../services/http';
-import'./counter.scss';
+import './counter.scss';
 
 export class Counter extends Component {
 
@@ -24,12 +23,9 @@ export class Counter extends Component {
   }
 
   increase = () => {
-    http.get('posts/1').then(data => {
-      console.log(data);
-      store.dispatch({
-        type: INCREASE,
-        payload: { step: 2 }
-      });
+    store.dispatch({
+      type: INCREASE,
+      payload: { step: 2 }
     });
   }
 

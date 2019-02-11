@@ -22,40 +22,42 @@ class App extends Component {
 			return (
 				<div className="wrapper">
 					
-					<div className="header">
-						{ routes.map((route, index) => (
-							<Route
-								key={ index }
-								path={ route.path }
-								exact={ route.exact }
-								component={ route.header }
-							/>
-						)) }
-					</div>
+					{ routes.map((route, index) => (
+						<Route
+							key={ index }
+							path={ route.path }
+							exact={ route.exact }
+							component={ route.header }
+						/>
+					)) }
 					{/* END HEADER */}
 
 					<div className="main">
 
-						<div className="aside-block">
-							{ routes.map((route, index) => (
-								<Route
-									key={ index }
-									path={ route.path }
-									exact={ route.exact }
-									component={ route.sidebar }
-								/>
-							)) }
-						</div>
+						<div className="container">
 
-						<div className="content-block">
-							{ routes.map((route, index) => (
-								<Route
-									key={ index }
-									path={ route.path }
-									exact={ route.exact }
-									component={ route.component }
-								/>
-							)) }
+							<div className="aside-block">
+								{ routes.map((route, index) => (
+									<Route
+										key={ index }
+										path={ route.path }
+										exact={ route.exact }
+										component={ route.sidebar }
+									/>
+								)) }
+							</div>
+
+							<div className="content-block">
+								{ routes.map((route, index) => (
+									<Route
+										key={ index }
+										path={ route.path }
+										exact={ route.exact }
+										component={ route.component }
+									/>
+								)) }
+							</div>
+
 						</div>
 
 					</div>

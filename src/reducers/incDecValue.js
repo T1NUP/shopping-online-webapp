@@ -1,7 +1,4 @@
-import { 
-  DECREASE,
-  INCREASE
- } from "../actions/actions";
+import { DECREASE, INCREASE } from "../actions/actions";
 
 export const incDecValue = (state = 0, action) => {
   const step = action.payload;
