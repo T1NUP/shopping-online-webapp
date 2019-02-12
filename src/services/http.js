@@ -24,7 +24,6 @@ const apiGet = (url, headers = {}) => {
         type: HIDE_LOADING,
         payload: { loading: false }
       });
-      console.log(err);
       alert('Request fail, please contact with your administration!');
       reject(err);
     });
@@ -37,6 +36,7 @@ const apiPost = (url, params = {}, headers = {}) => {
     payload: { loading: true }
   });
   return new Promise((resolve, reject) => {
+    console.log("params: ", params);
     return axios.post(url, params, Object.assign({}, HttpConfig, headers)).then(data => {
       console.log(data);
       store.dispatch({
@@ -49,7 +49,6 @@ const apiPost = (url, params = {}, headers = {}) => {
         type: HIDE_LOADING,
         payload: { loading: false }
       });
-      console.log(err);
       alert('Request fail, please contact with your administration!');
       reject(err);
     });
@@ -73,7 +72,6 @@ const apiDelete = (url, headers = {}) => {
         type: HIDE_LOADING,
         payload: { loading: false }
       });
-      console.log(err);
       alert('Request fail, please contact with your administration!');
       reject(err);
     });
@@ -98,7 +96,6 @@ const apiPut = (url, params = {}, headers = {}) => {
         type: HIDE_LOADING,
         payload: { loading: false }
       });
-      console.log(err);
       alert('Request fail, please contact with your administration!');
       reject(err);
     });

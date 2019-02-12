@@ -16,6 +16,7 @@ export class TestAPI extends Component {
       this.setState({
         products: store.getState().productList
       });
+      console.log(store.getState());
     });
     
   }
@@ -26,6 +27,7 @@ export class TestAPI extends Component {
 
   getAPI = () => {
     http.get('products').then(data => {
+      console.log(data);
       store.dispatch({
         type: GET_API,
         payload: {
@@ -39,7 +41,6 @@ export class TestAPI extends Component {
     let id = 0;
     const products = this.state.products;
     products.forEach(el => {
-      console.log(el);
       if (el.id > id) {
         id = el.id
       }
@@ -56,7 +57,7 @@ export class TestAPI extends Component {
       store.dispatch({
         type: POST_API,
         payload: {
-          productList: product
+          product: product
         }
       });
     }, err => {
@@ -65,7 +66,6 @@ export class TestAPI extends Component {
   }
   
   deleteAPI = (id) => {
-    console.log(id);
     http.delete('products/' + id).then(data => {
       console.log(data);
       store.dispatch({
@@ -86,6 +86,7 @@ export class TestAPI extends Component {
     return (
       <div className="product-list">
         <h4>This is Product List</h4>
+        <button onClick={ this.getAPI }>Get Product</button>
         <button onClick={ this.postAPI }>Add New</button>
         <table>
           <thead>
