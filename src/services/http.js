@@ -13,7 +13,7 @@ const apiGet = (url, headers = {}) => {
     payload: { loading: true }
   });
   return new Promise((resolve, reject) => {
-    return axios.get(url, Object.assign({}, HttpConfig, headers)).then(data => {
+    axios.get(url, Object.assign({}, HttpConfig, headers)).then(data => {
       store.dispatch({
         type: HIDE_LOADING,
         payload: { loading: false }
@@ -37,7 +37,7 @@ const apiPost = (url, params = {}, headers = {}) => {
   });
   return new Promise((resolve, reject) => {
     console.log("params: ", params);
-    return axios.post(url, params, Object.assign({}, HttpConfig, headers)).then(data => {
+    axios.post(url, params, Object.assign({}, HttpConfig, headers)).then(data => {
       console.log(data);
       store.dispatch({
         type: HIDE_LOADING,
@@ -61,7 +61,7 @@ const apiDelete = (url, headers = {}) => {
     payload: { loading: true }
   });
   return new Promise((resolve, reject) => {
-    return axios.delete(url, Object.assign({}, HttpConfig, headers)).then(data => {
+    axios.delete(url, Object.assign({}, HttpConfig, headers)).then(data => {
       store.dispatch({
         type: HIDE_LOADING,
         payload: { loading: false }
@@ -85,7 +85,7 @@ const apiPut = (url, params = {}, headers = {}) => {
     payload: { loading: true }
   });
   return new Promise((resolve, reject) => {
-    return axios.put(url, params, Object.assign({}, HttpConfig, headers)).then(data => {
+    axios.put(url, params, Object.assign({}, HttpConfig, headers)).then(data => {
       store.dispatch({
         type: HIDE_LOADING,
         payload: { loading: false }
