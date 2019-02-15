@@ -10,21 +10,28 @@ export const routes = [
 	{
 		path:      "/",
 		exact:     true,
+		component: HomeScreen,
 		sidebar:   Sidebar,
 		header:    Header,
-		component: HomeScreen
+		showHeader: true,
+		showSidebar: true
 	},
 	{
 		path:      "/login",
 		exact:     true,
+		component: LoginScreen,
 		sidebar:   Sidebar,
 		header:    Header,
-		component: LoginScreen
+		showHeader: false,
+		showSidebar: false,
 	},
 	{
 		path:      "/account",
+		exact:     true,
+		component: AccountScreen,
 		sidebar:   Sidebar,
 		header:    Header,
-		component: AccountScreen
+		showHeader: true,
+		showSidebar: true
 	}
 ];

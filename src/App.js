@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route }            from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch }		from 'react-router-dom';
 import { createStore }			from "redux";
 import { routes }           from "./router";
 import { Authentication }   from "./services/authen";
@@ -14,60 +14,53 @@ class App extends Component {
 
 	render() {
 
-		if (!this.authen.isLoggin()) {
-			return (
-				<LoginScreen></LoginScreen>
-			)
-		} else {
-			return (
+		return (
+			<Router>
 				<div className="wrapper">
-					
-					{ routes.map((route, index) => (
-						<Route
-							key={ index }
-							path={ route.path }
-							exact={ route.exact }
-							component={ route.header }
-						/>
-					)) }
+
+					<Switch>
+						{ routes.map((route, index) => {
+							return route.showHeader ? <Route key={ index } path={ route.path } exact={ route.exact } component={ route.header } /> : null
+						}) }
+					</Switch>
 					{/* END HEADER */}
 
 					<div className="main">
-
 						<div className="container">
 
-							<div className="aside-block">
-								{ routes.map((route, index) => (
-									<Route
-										key={ index }
-										path={ route.path }
-										exact={ route.exact }
-										component={ route.sidebar }
-									/>
-								)) }
-							</div>
-
+							<Switch>
+								{
+									routes.map((route, index) => {
+										return route.showSidebar ? <Route key={ index } path={ route.path } exact={ route.exact } component={ route.sidebar } /> : null
+									})
+								}
+							</Switch>
+							
 							<div className="content-block">
-								{ routes.map((route, index) => (
-									<Route
-										key={ index }
-										path={ route.path }
-										exact={ route.exact }
-										component={ route.component }
-									/>
-								)) }
+
+								<Switch>
+									{ routes.map((route, index) => (
+										<Route
+											key={ index }
+											path={ route.path }
+											exact={ route.exact }
+											component={ route.component }
+										/>
+									)) }
+								</Switch>
+								
 							</div>
-
 						</div>
-
 					</div>
 					{/* END MAIN CONTENT */}
 
 					<Loading />
 
 				</div>
-			);
-		}
+
+			</Router>
+			
+		);
 
 
 	}

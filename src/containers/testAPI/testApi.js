@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { store } from "../../App";
 import { GET_API, POST_API, DELETE_API } from "../../actions/actions";
 import { http } from '../../services/http';
@@ -8,7 +9,6 @@ export class TestAPI extends Component {
 
   constructor(props) {
     super(props);
-    this.getAPI();
     this.state = {
       products: store.getState().productList
     }
@@ -16,13 +16,15 @@ export class TestAPI extends Component {
       this.setState({
         products: store.getState().productList
       });
-      console.log(store.getState());
     });
-    
   }
 
   componentWillUnmount = () => {
     this.unsubscribe();
+  }
+
+  componentDidMount = () => {
+    this.getAPI();
   }
 
   getAPI = () => {
@@ -38,16 +40,7 @@ export class TestAPI extends Component {
   }
 
   postAPI = () => {
-    let id = 0;
-    const products = this.state.products;
-    products.forEach(el => {
-      if (el.id > id) {
-        id = el.id
-      }
-    });
-    id++;
     const product = {
-      id: id,
       name: "black jacket",
       category: "jacket",
       cost: "$50"
@@ -57,7 +50,7 @@ export class TestAPI extends Component {
       store.dispatch({
         type: POST_API,
         payload: {
-          product: product
+          product: data.data
         }
       });
     }, err => {
@@ -67,7 +60,6 @@ export class TestAPI extends Component {
   
   deleteAPI = (id) => {
     http.delete('products/' + id).then(data => {
-      console.log(data);
       store.dispatch({
         type: DELETE_API,
         payload: {

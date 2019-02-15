@@ -4,7 +4,7 @@ import { Link }             from 'react-router-dom';
 export class Header extends Component {
 	render() {
 		return (
-			<div className="header">
+			<div className="main-header">
 				<nav className="navbar navbar-default">
 					<div className="container-fluid">
 
