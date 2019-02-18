@@ -1,19 +1,19 @@
 {
-  "posts": [
+  "products": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50",
+      "id": 2
+    },
+    {
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50",
+      "id": 3
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
+  "token": {
+    "token": "my-token"
   }
 }

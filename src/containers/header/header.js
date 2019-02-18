@@ -4,61 +4,323 @@ import { Link }             from 'react-router-dom';
 export class Header extends Component {
 	render() {
 		return (
-			<div className="main-header">
-				<nav className="navbar navbar-default">
-					<div className="container-fluid">
-
-						<div className="navbar-header">
-							<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-								<span className="sr-only">Toggle navigation</span>
-								<span className="icon-bar"></span>
-								<span className="icon-bar"></span>
-								<span className="icon-bar"></span>
-							</button>
-							<Link className="navbar-brand" to="#"><img src={ process.env.PUBLIC_URL + '/assets/corporate/img/logos/logo-shop-red.png' } alt="" /></Link>
-						</div>
-
-						<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul className="nav navbar-nav">
-								<li className="active"><Link to="#">Link <span className="sr-only">(current)</span></Link></li>
-								<li><Link to="#">Link</Link></li>
-								<li className="dropdown">
-									<Link to="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret"></span></Link>
-									<ul className="dropdown-menu">
-										<li><Link to="#">Action</Link></li>
-										<li><Link to="#">Another action</Link></li>
-										<li><Link to="#">Something else here</Link></li>
-										<li role="separator" className="divider"></li>
-										<li><Link to="#">Separated link</Link></li>
-									</ul>
-								</li>
-							</ul>
-
-							<form className="navbar-form navbar-left">
-								<div className="form-group">
-									<input type="text" className="form-control" placeholder="Search" />
+			<>
+				{/* BEGIN TOP BAR */}
+				<div className="pre-header">
+						<div className="container">
+								<div className="row">
+										{/* <!-- BEGIN TOP BAR LEFT PART --> */}
+										<div className="col-md-6 col-sm-6 additional-shop-info">
+												<ul className="list-unstyled list-inline">
+														<li><i className="fa fa-phone"></i><span>+1 456 6717</span></li>
+														{/* <!-- BEGIN CURRENCIES --> */}
+														<li className="shop-currencies">
+																<Link to="">€</Link>
+																<Link to="">£</Link>
+																<Link to="" className="current">$</Link>
+														</li>
+														{/* <!-- END CURRENCIES --> */}
+														{/* <!-- BEGIN LANGS --> */}
+														<li className="langs-block">
+																<Link to="" className="current">English </Link>
+																<div className="langs-block-others-wrapper"><div className="langs-block-others">
+																	<Link to="">French</Link>
+																	<Link to="">Germany</Link>
+																	<Link to="">Turkish</Link>
+																</div></div>
+														</li>
+														{/* <!-- END LANGS --> */}
+												</ul>
+										</div>
+										{/* <!-- END TOP BAR LEFT PART --> */}
+										{/* <!-- BEGIN TOP BAR MENU --> */}
+										<div className="col-md-6 col-sm-6 additional-nav">
+												<ul className="list-unstyled list-inline pull-right">
+														<li><Link to="account">My Account</Link></li>
+														<li><Link to="shop-wishlist.html">My Wishlist</Link></li>
+														<li><Link to="checkout">Checkout</Link></li>
+														<li><Link to="login">Log In</Link></li>
+												</ul>
+										</div>
+										{/* <!-- END TOP BAR MENU --> */}
 								</div>
-								<button type="submit" className="btn btn-default">Submit</button>
-							</form>
+						</div>        
+				</div>
+    		{/* <!-- END TOP BAR --> */}
 
-							<ul className="nav navbar-nav navbar-right">
-								<li><Link to="#">Link</Link></li>
+				{/* <!-- BEGIN HEADER --> */}
+				<div className="header">
+					<div className="container">
+						<Link className="site-logo" to="shop-index.html"><img src="assets/corporate/img/logos/logo-shop-red.png" alt="Metronic Shop UI" /></Link>
+
+						<Link to="javascript:void(0);" className="mobi-toggler"><i className="fa fa-bars"></i></Link>
+
+						{/* <!-- BEGIN CART --> */}
+						<div className="top-cart-block">
+							<div className="top-cart-info">
+								<Link to="javascript:void(0);" className="top-cart-info-count">3 items</Link>
+								<Link to="javascript:void(0);" className="top-cart-info-value">$1260</Link>
+							</div>
+							<i className="fa fa-shopping-cart"></i>
+														
+							<div className="top-cart-content-wrapper">
+								<div className="top-cart-content">
+									<ul className="scroller" style={{ height : 250 }}>
+										<li>
+											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
+											<span className="cart-content-count">x 1</span>
+											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
+											<em>$1230</em>
+											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+										</li>
+										<li>
+											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
+											<span className="cart-content-count">x 1</span>
+											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
+											<em>$1230</em>
+											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+										</li>
+										<li>
+											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
+											<span className="cart-content-count">x 1</span>
+											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
+											<em>$1230</em>
+											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+										</li>
+										<li>
+											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
+											<span className="cart-content-count">x 1</span>
+											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
+											<em>$1230</em>
+											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+										</li>
+										<li>
+											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
+											<span className="cart-content-count">x 1</span>
+											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
+											<em>$1230</em>
+											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+										</li>
+										<li>
+											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
+											<span className="cart-content-count">x 1</span>
+											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
+											<em>$1230</em>
+											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+										</li>
+										<li>
+											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
+											<span className="cart-content-count">x 1</span>
+											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
+											<em>$1230</em>
+											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+										</li>
+										<li>
+											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
+											<span className="cart-content-count">x 1</span>
+											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
+											<em>$1230</em>
+											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+										</li>
+									</ul>
+									<div className="text-right">
+										<Link to="shop-shopping-cart.html" className="btn btn-default">View Cart</Link>
+										<Link to="shop-checkout.html" className="btn btn-primary">Checkout</Link>
+									</div>
+								</div>
+							</div>            
+						</div>
+						{/* <!--END CART --> */}
+
+						{/* <!-- BEGIN NAVIGATION --> */}
+						<div className="header-navigation">
+							<ul>
 								<li className="dropdown">
-									<Link to="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret"></span></Link>
+									<Link className="dropdown-toggle" data-toggle="dropdown" data-target="#" to="javascript:;">Woman</Link>
+									{/* <!-- BEGIN DROPDOWN MENU --> */}
 									<ul className="dropdown-menu">
-										<li><Link to="#">Action</Link></li>
-										<li><Link to="#">Another action</Link></li>
-										<li><Link to="#">Something else here</Link></li>
-										<li role="separator" className="divider"></li>
-										<li><Link to="#">Separated link</Link></li>
+										<li className="dropdown-submenu">
+											<Link to="shop-product-list.html">Hi Tops <i className="fa fa-angle-right"></i></Link>
+											<ul className="dropdown-menu" role="menu">
+												<li><Link to="shop-product-list.html">Second Level Link</Link></li>
+												<li><Link to="shop-product-list.html">Second Level Link</Link></li>
+												<li className="dropdown-submenu">
+													<Link className="dropdown-toggle" data-toggle="dropdown" data-target="#" to="javascript:;">
+														Second Level Link 
+														<i className="fa fa-angle-right"></i>
+													</Link>
+													<ul className="dropdown-menu">
+														<li><Link to="shop-product-list.html">Third Level Link</Link></li>
+														<li><Link to="shop-product-list.html">Third Level Link</Link></li>
+														<li><Link to="shop-product-list.html">Third Level Link</Link></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li><Link to="shop-product-list.html">Running Shoes</Link></li>
+										<li><Link to="shop-product-list.html">Jackets and Coats</Link></li>
+									</ul>
+									{/* <!-- END DROPDOWN MENU --> */}
+								</li>
+								<li className="dropdown dropdown-megamenu">
+									<Link className="dropdown-toggle" data-toggle="dropdown" data-target="#" to="javascript:;">Man</Link>
+									<ul className="dropdown-menu">
+										<li>
+											<div className="header-navigation-content">
+												<div className="row">
+													<div className="col-md-4 header-navigation-col">
+														<h4>Footwear</h4>
+														<ul>
+															<li><Link to="shop-product-list.html">Astro Trainers</Link></li>
+															<li><Link to="shop-product-list.html">Basketball Shoes</Link></li>
+															<li><Link to="shop-product-list.html">Boots</Link></li>
+															<li><Link to="shop-product-list.html">Canvas Shoes</Link></li>
+															<li><Link to="shop-product-list.html">Football Boots</Link></li>
+															<li><Link to="shop-product-list.html">Golf Shoes</Link></li>
+															<li><Link to="shop-product-list.html">Hi Tops</Link></li>
+															<li><Link to="shop-product-list.html">Indoor and Court Trainers</Link></li>
+														</ul>
+													</div>
+													<div className="col-md-4 header-navigation-col">
+														<h4>Clothing</h4>
+														<ul>
+															<li><Link to="shop-product-list.html">Base Layer</Link></li>
+															<li><Link to="shop-product-list.html">Character</Link></li>
+															<li><Link to="shop-product-list.html">Chinos</Link></li>
+															<li><Link to="shop-product-list.html">Combats</Link></li>
+															<li><Link to="shop-product-list.html">Cricket Clothing</Link></li>
+															<li><Link to="shop-product-list.html">Fleeces</Link></li>
+															<li><Link to="shop-product-list.html">Gilets</Link></li>
+															<li><Link to="shop-product-list.html">Golf Tops</Link></li>
+														</ul>
+													</div>
+													<div className="col-md-4 header-navigation-col">
+														<h4>Accessories</h4>
+														<ul>
+															<li><Link to="shop-product-list.html">Belts</Link></li>
+															<li><Link to="shop-product-list.html">Caps</Link></li>
+															<li><Link to="shop-product-list.html">Gloves, Hats and Scarves</Link></li>
+														</ul>
+
+														<h4>Clearance</h4>
+														<ul>
+															<li><Link to="shop-product-list.html">Jackets</Link></li>
+															<li><Link to="shop-product-list.html">Bottoms</Link></li>
+														</ul>
+													</div>
+													<div className="col-md-12 nav-brands">
+														<ul>
+															<li><Link to="shop-product-list.html"><img title="esprit" alt="esprit" src="assets/pages/img/brands/esprit.jpg" /></Link></li>
+															<li><Link to="shop-product-list.html"><img title="gap" alt="gap" src="assets/pages/img/brands/gap.jpg" /></Link></li>
+															<li><Link to="shop-product-list.html"><img title="next" alt="next" src="assets/pages/img/brands/next.jpg" /></Link></li>
+															<li><Link to="shop-product-list.html"><img title="puma" alt="puma" src="assets/pages/img/brands/puma.jpg" /></Link></li>
+															<li><Link to="shop-product-list.html"><img title="zara" alt="zara" src="assets/pages/img/brands/zara.jpg" /></Link></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</li>
 									</ul>
 								</li>
+								<li><Link to="shop-item.html">Kids</Link></li>
+								<li className="dropdown dropdown100 nav-catalogue">
+									<Link className="dropdown-toggle" data-toggle="dropdown" data-target="#" to="javascript:;">New</Link>
+									<ul className="dropdown-menu">
+										<li>
+											<div className="header-navigation-content">
+												<div className="row">
+													<div className="col-md-3 col-sm-4 col-xs-6">
+														<div className="product-item">
+															<div className="pi-img-wrapper">
+																<Link to="shop-item.html"><img src="assets/pages/img/products/model4.jpg" className="img-responsive" alt="Berry Lace Dress" /></Link>
+															</div>
+															<h3><Link to="shop-item.html">Berry Lace Dress</Link></h3>
+															<div className="pi-price">$29.00</div>
+															<Link to="javascript:;" className="btn btn-default add2cart">Add to cart</Link>
+														</div>
+													</div>
+													<div className="col-md-3 col-sm-4 col-xs-6">
+														<div className="product-item">
+															<div className="pi-img-wrapper">
+																<Link to="shop-item.html"><img src="assets/pages/img/products/model3.jpg" className="img-responsive" alt="Berry Lace Dress" /></Link>
+															</div>
+															<h3><Link to="shop-item.html">Berry Lace Dress</Link></h3>
+															<div className="pi-price">$29.00</div>
+															<Link to="javascript:;" className="btn btn-default add2cart">Add to cart</Link>
+														</div>
+													</div>
+													<div className="col-md-3 col-sm-4 col-xs-6">
+														<div className="product-item">
+															<div className="pi-img-wrapper">
+																<Link to="shop-item.html"><img src="assets/pages/img/products/model7.jpg" className="img-responsive" alt="Berry Lace Dress" /></Link>
+															</div>
+															<h3><Link to="shop-item.html">Berry Lace Dress</Link></h3>
+															<div className="pi-price">$29.00</div>
+															<Link to="javascript:;" className="btn btn-default add2cart">Add to cart</Link>
+														</div>
+													</div>
+													<div className="col-md-3 col-sm-4 col-xs-6">
+														<div className="product-item">
+															<div className="pi-img-wrapper">
+																<Link to="shop-item.html"><img src="assets/pages/img/products/model4.jpg" className="img-responsive" alt="Berry Lace Dress" /></Link>
+															</div>
+															<h3><Link to="shop-item.html">Berry Lace Dress</Link></h3>
+															<div className="pi-price">$29.00</div>
+															<Link to="javascript:;" className="btn btn-default add2cart">Add to cart</Link>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li className="dropdown">
+									<Link className="dropdown-toggle" data-toggle="dropdown" data-target="#" to="">Pages</Link>
+									<ul className="dropdown-menu">
+										<li className="active"><Link to="shop-index.html">Home Default</Link></li>
+										<li><Link to="shop-index-header-fix.html">Home Header Fixed</Link></li>
+										<li><Link to="shop-index-light-footer.html">Home Light Footer</Link></li>
+										<li><Link to="shop-product-list.html">Product List</Link></li>
+										<li><Link to="shop-search-result.html">Search Result</Link></li>
+										<li><Link to="shop-item.html">Product Page</Link></li>
+										<li><Link to="shop-shopping-cart-null.html">Shopping Cart (Null Cart)</Link></li>
+										<li><Link to="shop-shopping-cart.html">Shopping Cart</Link></li>
+										<li><Link to="shop-checkout.html">Checkout</Link></li>
+										<li><Link to="shop-about.html">About</Link></li>
+										<li><Link to="shop-contacts.html">Contacts</Link></li>
+										<li><Link to="shop-account.html">My account</Link></li>
+										<li><Link to="shop-wishlist.html">My Wish List</Link></li>
+										<li><Link to="shop-goods-compare.html">Product Comparison</Link></li>
+										<li><Link to="shop-standart-forms.html">Standart Forms</Link></li>
+										<li><Link to="shop-faq.html">FAQ</Link></li>
+										<li><Link to="shop-privacy-policy.html">Privacy Policy</Link></li>
+										<li><Link to="shop-terms-conditions-page.html">Terms &amp; Conditions</Link></li>
+									</ul>
+								</li>
+								<li><Link to="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes&amp;utm_source=download&amp;utm_medium=banner&amp;utm_campaign=metronic_frontend_freebie" target="_blank">Admin theme</Link></li>
+								{/* <!-- BEGIN TOP SEARCH --> */}
+								<li className="menu-search">
+									<span className="sep"></span>
+									<i className="fa fa-search search-btn"></i>
+									<div className="search-box">
+										<form action="#">
+											<div className="input-group">
+												<input type="text" placeholder="Search" className="form-control" />
+												<span className="input-group-btn">
+													<button className="btn btn-primary" type="submit">Search</button>
+												</span>
+											</div>
+										</form>
+									</div> 
+								</li>
+								{/* <!-- END TOP SEARCH --> */}
 							</ul>
 						</div>
+						{/* <!-- END NAVIGATION --> */}
 					</div>
-				</nav>
-
-			</div>
+				</div>
+				{/* <!-- Header END --> */}
+			</>
 		);
 	}
 }

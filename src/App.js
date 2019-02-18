@@ -36,7 +36,7 @@ class App extends Component {
 								}
 							</Switch>
 							
-							<div className="content-block">
+							<div className="content">
 
 								<Switch>
 									{ routes.map((route, index) => (
@@ -53,6 +53,14 @@ class App extends Component {
 						</div>
 					</div>
 					{/* END MAIN CONTENT */}
+
+					<Switch>
+						{
+							routes.map((route, index) => {
+								return route.showFooter ? <Route key={ index } path={ route.path } exact={ route.exact } component={ route.footer } /> : null
+							})
+						}
+					</Switch>
 
 					<Loading />
 

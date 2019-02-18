@@ -5,7 +5,7 @@ export const productList = (state = [], action) => {
   switch (action.type) {
 
     case GET_API:
-     return [...state, ...action.payload.productList]
+     return [...action.payload.productList]
     
     case POST_API:
      return [...state, ...[action.payload.product]]
