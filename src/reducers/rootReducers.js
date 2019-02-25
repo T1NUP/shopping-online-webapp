@@ -1,12 +1,12 @@
 import { combineReducers } 	from "redux";
-import { productList } 			from "./productList";
-import { basket } 					from "./basket";
-import { incDecValue } 			from "./incDecValue";
-import { loading } 					from './loading';
+import { products } 			from "./ProductReducer";
+import { basket } 					from "./BasketReducer";
+import { counter } 			from "./CouterReducer";
+import { loading } 					from './LoadingReducer';
 
 export const rootReducer = combineReducers({
 	loading,
-	productList,
+	products,
 	basket,
-	incDecValue
+	counter
 });

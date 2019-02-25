@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link }             from 'react-router-dom';
 
-export class Footer extends Component {
+export class FooterContainer extends Component {
 
   render() {
     return(
@@ -74,13 +74,13 @@ export class Footer extends Component {
               <div className="col-md-3 col-sm-6 pre-footer-col">
                 <h2>Information</h2>
                 <ul className="list-unstyled">
-                  <li><i className="fa fa-angle-right"></i> <Link to="javascript:;">Delivery Information</Link></li>
-                  <li><i className="fa fa-angle-right"></i> <Link to="javascript:;">Customer Service</Link></li>
-                  <li><i className="fa fa-angle-right"></i> <Link to="javascript:;">Order Tracking</Link></li>
-                  <li><i className="fa fa-angle-right"></i> <Link to="javascript:;">Shipping &amp; Returns</Link></li>
+                  <li><i className="fa fa-angle-right"></i> <Link to="/">Delivery Information</Link></li>
+                  <li><i className="fa fa-angle-right"></i> <Link to="/">Customer Service</Link></li>
+                  <li><i className="fa fa-angle-right"></i> <Link to="/">Order Tracking</Link></li>
+                  <li><i className="fa fa-angle-right"></i> <Link to="/">Shipping &amp; Returns</Link></li>
                   <li><i className="fa fa-angle-right"></i> <Link to="contacts.html">Contact Us</Link></li>
-                  <li><i className="fa fa-angle-right"></i> <Link to="javascript:;">Careers</Link></li>
-                  <li><i className="fa fa-angle-right"></i> <Link to="javascript:;">Payment Methods</Link></li>
+                  <li><i className="fa fa-angle-right"></i> <Link to="/">Careers</Link></li>
+                  <li><i className="fa fa-angle-right"></i> <Link to="/">Payment Methods</Link></li>
                 </ul>
               </div>
               {/* <!-- END INFO BLOCK --> */}
@@ -113,14 +113,14 @@ export class Footer extends Component {
               {/* <!-- BEGIN SOCIAL ICONS --> */}
               <div className="col-md-6 col-sm-6">
                 <ul className="social-icons">
-                  <li><Link className="rss" data-original-title="rss" to="javascript:;"></Link></li>
-                  <li><Link className="facebook" data-original-title="facebook" to="javascript:;"></Link></li>
-                  <li><Link className="twitter" data-original-title="twitter" to="javascript:;"></Link></li>
-                  <li><Link className="googleplus" data-original-title="googleplus" to="javascript:;"></Link></li>
-                  <li><Link className="linkedin" data-original-title="linkedin" to="javascript:;"></Link></li>
-                  <li><Link className="youtube" data-original-title="youtube" to="javascript:;"></Link></li>
-                  <li><Link className="vimeo" data-original-title="vimeo" to="javascript:;"></Link></li>
-                  <li><Link className="skype" data-original-title="skype" to="javascript:;"></Link></li>
+                  <li><Link className="rss" data-original-title="rss" to="/"></Link></li>
+                  <li><Link className="facebook" data-original-title="facebook" to="/"></Link></li>
+                  <li><Link className="twitter" data-original-title="twitter" to="/"></Link></li>
+                  <li><Link className="googleplus" data-original-title="googleplus" to="/"></Link></li>
+                  <li><Link className="linkedin" data-original-title="linkedin" to="/"></Link></li>
+                  <li><Link className="youtube" data-original-title="youtube" to="/"></Link></li>
+                  <li><Link className="vimeo" data-original-title="vimeo" to="/"></Link></li>
+                  <li><Link className="skype" data-original-title="skype" to="/"></Link></li>
                 </ul>
               </div>
               {/* <!-- END SOCIAL ICONS --> */}

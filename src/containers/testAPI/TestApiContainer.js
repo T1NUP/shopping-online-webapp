@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { store } from "../../App";
-import { GET_API, POST_API, DELETE_API } from "../../actions/actions";
-import { http } from '../../services/http';
-import './testAPI.scss';
+import { GET_API, POST_API, DELETE_API, PUT_API } from "../../actions/actions";
+import { http } from '../../services/HttpService';
+import './TestApiContainer.scss';
 
-export class TestAPI extends Component {
+export class TestApiContainer extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      products: store.getState().productList
+      products: store.getState().products
     }
     this.unsubscribe = store.subscribe(() => {
       this.setState({
-        products: store.getState().productList
+        products: store.getState().products
       });
     });
   }
@@ -29,11 +28,10 @@ export class TestAPI extends Component {
 
   getAPI = () => {
     http.get('products').then(data => {
-      console.log(data);
       store.dispatch({
         type: GET_API,
         payload: {
-          productList: data.data
+          products: data.data
         }
       });
     });
@@ -46,11 +44,10 @@ export class TestAPI extends Component {
       cost: "$50"
     };
     http.post('products', product).then(data => {
-      console.log(data);
       store.dispatch({
         type: POST_API,
         payload: {
-          product: data.data
+          products: data.data
         }
       });
     }, err => {
@@ -70,7 +67,21 @@ export class TestAPI extends Component {
   }
 
   putAPI = () => {
-
+    const product = {
+      name: "black jacket",
+      category: "jacket",
+      cost: "$50"
+    };
+    http.put('products', product).then(data => {
+      store.dispatch({
+        type: PUT_API,
+        payload: {
+          products: data.data
+        }
+      });
+    }, err => {
+      console.log(err);
+    });
   }
 
   render() {

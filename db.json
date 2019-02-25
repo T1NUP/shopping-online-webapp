@@ -4,13 +4,31 @@
       "name": "black jacket",
       "category": "jacket",
       "cost": "$50",
-      "id": 2
+      "id": 3
     },
     {
       "name": "black jacket",
       "category": "jacket",
       "cost": "$50",
-      "id": 3
+      "id": 4
+    },
+    {
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50",
+      "id": 5
+    },
+    {
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50",
+      "id": 6
+    },
+    {
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50",
+      "id": 7
     }
   ],
   "token": {

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { store } from "../../App";
-import './loading.scss';
+import './LoadingComponent.scss';
 
-export class Loading extends Component {
+export class LoadingComponent extends Component {
 
   constructor(props) {
     super(props);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { store } from "../../App";
 
-export class BestSeller extends Component {
+export class FilterProductComponent extends Component {
 
   constructor(props) {
     super(props);
@@ -22,8 +22,8 @@ export class BestSeller extends Component {
 
   render() {
     return (
-      <div className="best-seller">
-        <h4>This is Best Seller components</h4>
+      <div className="filter-product">
+        <h4>This is Filter Product components</h4>
       </div>
     )
   }

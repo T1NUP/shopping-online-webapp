@@ -1,6 +1,6 @@
 import { DECREASE, INCREASE } from "../actions/actions";
 
-export const incDecValue = (state = 0, action) => {
+export const counter = (state = 0, action) => {
   const step = action.payload;
   switch (action.type) {
     case INCREASE:

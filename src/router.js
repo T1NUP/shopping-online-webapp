@@ -1,20 +1,19 @@
-import { AccountScreen } from './containers/account/account';
-import { HomeScreen }    from './containers/home/home';
-import { LoginScreen }   from './containers/login/login';
-
-import { Header }  from './containers/header/header';
-import { Footer }  from './containers/footer/footer';
-import { Sidebar } from './containers/aside/aside';
+import { AccountContainer } from './containers/account/AccountContainer';
+import { HomeContainer }    from './containers/home/HomeContainer';
+import { LoginContainer }   from './containers/login/LoginContainer';
+import { HeaderContainer }  from './containers/header/HeaderContainer';
+import { FooterContainer }  from './containers/footer/FooterContainer';
+import { AsideContainer } 	from './containers/aside/AsideContainer';
 
 
 export const routes = [
 	{
 		path       : "/",
 		exact      : true,
-		component  : HomeScreen,
-		sidebar    : Sidebar,
-		header     : Header,
-		footer     : Footer,
+		component  : HomeContainer,
+		sidebar    : AsideContainer,
+		header     : HeaderContainer,
+		footer     : FooterContainer,
 		showSidebar: false,
 		showHeader : true,
 		showFooter : true,
@@ -22,10 +21,10 @@ export const routes = [
 	{
 		path       : "/login",
 		exact      : true,
-		component  : LoginScreen,
-		sidebar    : Sidebar,
-		header     : Header,
-		footer     : Footer,
+		component  : LoginContainer,
+		sidebar    : AsideContainer,
+		header     : HeaderContainer,
+		footer     : FooterContainer,
 		showSidebar: false,
 		showHeader : false,
 		showFooter : false,
@@ -33,10 +32,10 @@ export const routes = [
 	{
 		path       : "/account",
 		exact      : true,
-		component  : AccountScreen,
-		sidebar    : Sidebar,
-		header     : Header,
-		footer     : Footer,
+		component  : AccountContainer,
+		sidebar    : AsideContainer,
+		header     : HeaderContainer,
+		footer     : FooterContainer,
 		showSidebar: true,
 		showHeader : true,
 		showFooter : true,

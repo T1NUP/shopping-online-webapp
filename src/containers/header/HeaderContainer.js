@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link }             from 'react-router-dom';
 
-export class Header extends Component {
+export class HeaderContainer extends Component {
 	render() {
 		return (
 			<>
@@ -53,13 +53,13 @@ export class Header extends Component {
 					<div className="container">
 						<Link className="site-logo" to="shop-index.html"><img src="assets/corporate/img/logos/logo-shop-red.png" alt="Metronic Shop UI" /></Link>
 
-						<Link to="javascript:void(0);" className="mobi-toggler"><i className="fa fa-bars"></i></Link>
+						<Link to="/" className="mobi-toggler"><i className="fa fa-bars"></i></Link>
 
 						{/* <!-- BEGIN CART --> */}
 						<div className="top-cart-block">
 							<div className="top-cart-info">
-								<Link to="javascript:void(0);" className="top-cart-info-count">3 items</Link>
-								<Link to="javascript:void(0);" className="top-cart-info-value">$1260</Link>
+								<Link to="/" className="top-cart-info-count">3 items</Link>
+								<Link to="/" className="top-cart-info-value">$1260</Link>
 							</div>
 							<i className="fa fa-shopping-cart"></i>
 														
@@ -71,56 +71,56 @@ export class Header extends Component {
 											<span className="cart-content-count">x 1</span>
 											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
 											<em>$1230</em>
-											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+											<Link to="/" className="del-goods">&nbsp;</Link>
 										</li>
 										<li>
 											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
 											<span className="cart-content-count">x 1</span>
 											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
 											<em>$1230</em>
-											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+											<Link to="/" className="del-goods">&nbsp;</Link>
 										</li>
 										<li>
 											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
 											<span className="cart-content-count">x 1</span>
 											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
 											<em>$1230</em>
-											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+											<Link to="/" className="del-goods">&nbsp;</Link>
 										</li>
 										<li>
 											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
 											<span className="cart-content-count">x 1</span>
 											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
 											<em>$1230</em>
-											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+											<Link to="/" className="del-goods">&nbsp;</Link>
 										</li>
 										<li>
 											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
 											<span className="cart-content-count">x 1</span>
 											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
 											<em>$1230</em>
-											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+											<Link to="/" className="del-goods">&nbsp;</Link>
 										</li>
 										<li>
 											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
 											<span className="cart-content-count">x 1</span>
 											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
 											<em>$1230</em>
-											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+											<Link to="/" className="del-goods">&nbsp;</Link>
 										</li>
 										<li>
 											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
 											<span className="cart-content-count">x 1</span>
 											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
 											<em>$1230</em>
-											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+											<Link to="/" className="del-goods">&nbsp;</Link>
 										</li>
 										<li>
 											<Link to="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34" /></Link>
 											<span className="cart-content-count">x 1</span>
 											<strong><Link to="shop-item.html">Rolex Classic Watch</Link></strong>
 											<em>$1230</em>
-											<Link to="javascript:void(0);" className="del-goods">&nbsp;</Link>
+											<Link to="/" className="del-goods">&nbsp;</Link>
 										</li>
 									</ul>
 									<div className="text-right">
@@ -136,7 +136,7 @@ export class Header extends Component {
 						<div className="header-navigation">
 							<ul>
 								<li className="dropdown">
-									<Link className="dropdown-toggle" data-toggle="dropdown" data-target="#" to="javascript:;">Woman</Link>
+									<Link className="dropdown-toggle" data-toggle="dropdown" data-target="#" to="/">Woman</Link>
 									{/* <!-- BEGIN DROPDOWN MENU --> */}
 									<ul className="dropdown-menu">
 										<li className="dropdown-submenu">
@@ -145,7 +145,7 @@ export class Header extends Component {
 												<li><Link to="shop-product-list.html">Second Level Link</Link></li>
 												<li><Link to="shop-product-list.html">Second Level Link</Link></li>
 												<li className="dropdown-submenu">
-													<Link className="dropdown-toggle" data-toggle="dropdown" data-target="#" to="javascript:;">
+													<Link className="dropdown-toggle" data-toggle="dropdown" data-target="#" to="/">
 														Second Level Link 
 														<i className="fa fa-angle-right"></i>
 													</Link>
@@ -163,7 +163,7 @@ export class Header extends Component {
 									{/* <!-- END DROPDOWN MENU --> */}
 								</li>
 								<li className="dropdown dropdown-megamenu">
-									<Link className="dropdown-toggle" data-toggle="dropdown" data-target="#" to="javascript:;">Man</Link>
+									<Link className="dropdown-toggle" data-toggle="dropdown" data-target="#" to="/">Man</Link>
 									<ul className="dropdown-menu">
 										<li>
 											<div className="header-navigation-content">
@@ -224,7 +224,7 @@ export class Header extends Component {
 								</li>
 								<li><Link to="shop-item.html">Kids</Link></li>
 								<li className="dropdown dropdown100 nav-catalogue">
-									<Link className="dropdown-toggle" data-toggle="dropdown" data-target="#" to="javascript:;">New</Link>
+									<Link className="dropdown-toggle" data-toggle="dropdown" data-target="#" to="/">New</Link>
 									<ul className="dropdown-menu">
 										<li>
 											<div className="header-navigation-content">
@@ -236,7 +236,7 @@ export class Header extends Component {
 															</div>
 															<h3><Link to="shop-item.html">Berry Lace Dress</Link></h3>
 															<div className="pi-price">$29.00</div>
-															<Link to="javascript:;" className="btn btn-default add2cart">Add to cart</Link>
+															<Link to="/" className="btn btn-default add2cart">Add to cart</Link>
 														</div>
 													</div>
 													<div className="col-md-3 col-sm-4 col-xs-6">
@@ -246,7 +246,7 @@ export class Header extends Component {
 															</div>
 															<h3><Link to="shop-item.html">Berry Lace Dress</Link></h3>
 															<div className="pi-price">$29.00</div>
-															<Link to="javascript:;" className="btn btn-default add2cart">Add to cart</Link>
+															<Link to="/" className="btn btn-default add2cart">Add to cart</Link>
 														</div>
 													</div>
 													<div className="col-md-3 col-sm-4 col-xs-6">
@@ -256,7 +256,7 @@ export class Header extends Component {
 															</div>
 															<h3><Link to="shop-item.html">Berry Lace Dress</Link></h3>
 															<div className="pi-price">$29.00</div>
-															<Link to="javascript:;" className="btn btn-default add2cart">Add to cart</Link>
+															<Link to="/" className="btn btn-default add2cart">Add to cart</Link>
 														</div>
 													</div>
 													<div className="col-md-3 col-sm-4 col-xs-6">
@@ -266,7 +266,7 @@ export class Header extends Component {
 															</div>
 															<h3><Link to="shop-item.html">Berry Lace Dress</Link></h3>
 															<div className="pi-price">$29.00</div>
-															<Link to="javascript:;" className="btn btn-default add2cart">Add to cart</Link>
+															<Link to="/" className="btn btn-default add2cart">Add to cart</Link>
 														</div>
 													</div>
 												</div>

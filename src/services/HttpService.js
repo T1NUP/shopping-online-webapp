@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { store } from '../App';
 import { SHOW_LOADING, HIDE_LOADING } from '../actions/actions';
-import Axios from 'axios';
 
 const getHeaders = () => {
   return {
@@ -57,7 +56,6 @@ const apiPost = (url, params = {}, headers = {}) => {
   });
   return new Promise((resolve, reject) => {
     axios.post(url, params, Object.assign({}, HttpConfig, headers)).then(data => {
-      console.log(data);
       store.dispatch({
         type: HIDE_LOADING,
         payload: {

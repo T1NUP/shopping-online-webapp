@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class AccountScreen extends Component {
+export class AccountContainer extends Component {
 
   render() {
     return(

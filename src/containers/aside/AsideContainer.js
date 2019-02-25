@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link, Route } from 'react-router-dom';
-import { sidebarRoutes } from './sidebar-route';
+import { sidebarRoutes } from './SidebarRouteContainer';
 
-export class Sidebar extends Component {
+export class AsideContainer extends Component {
 	render() {
 		return (
 			<div className="aside">
