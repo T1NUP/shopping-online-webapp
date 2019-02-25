@@ -1,9 +1,9 @@
-import { AccountContainer } from './containers/account/AccountContainer';
-import { HomeContainer }    from './containers/home/HomeContainer';
-import { LoginContainer }   from './containers/login/LoginContainer';
-import { HeaderContainer }  from './containers/header/HeaderContainer';
-import { FooterContainer }  from './containers/footer/FooterContainer';
-import { AsideContainer } 	from './containers/aside/AsideContainer';
+import { AccountContainer } from './containers/account/account.container';
+import { HomeContainer }    from './containers/home/home.container';
+import { LoginContainer }   from './containers/login/login.container';
+import { HeaderContainer }  from './containers/header/header.container';
+import { FooterContainer }  from './containers/footer/footer.container';
+import { AsideContainer } 	from './containers/aside/aside.container';
 
 
 export const routes = [

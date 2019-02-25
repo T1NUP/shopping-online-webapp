@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { store } from "../../App";
 import { GET_API, POST_API, DELETE_API, PUT_API } from "../../actions/actions";
-import { http } from '../../services/HttpService';
-import './TestApiContainer.scss';
+import { http } from '../../services/http.service';
+import './test-api.container.scss';
 
 export class TestApiContainer extends Component {
 

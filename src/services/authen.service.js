@@ -1,4 +1,4 @@
-import { http } from './HttpService';
+import { http } from './http.service';
 
 export class Authentication {
   

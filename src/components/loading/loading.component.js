@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { store } from "../../App";
-import './LoadingComponent.scss';
+import './loading.component.scss';
 
 export class LoadingComponent extends Component {
 

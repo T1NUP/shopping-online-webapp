@@ -1,5 +1,5 @@
-import { BestSellerComponent } from '../../components/bestSeller/BestSellerComponent';
-import { FilterProductComponent } from '../../components/filterProduct/FilterProductComponent';
+import { BestSellerComponent } from '../../components/bestSeller/best-seller.component';
+import { FilterProductComponent } from '../../components/filterProduct/filter-product.component';
 
 export const sidebarRoutes = [
 	{

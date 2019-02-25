@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { store } from "../../App";
 import { DECREASE, INCREASE } from "../../actions/actions";
-import './CounterComponent.scss';
+import './counter.component.scss';
 
 export class CounterComponent extends Component {
 

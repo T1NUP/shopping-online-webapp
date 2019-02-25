@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, Route } from 'react-router-dom';
-import { sidebarRoutes } from './SidebarRouteContainer';
+import { sidebarRoutes } from './sidebar.route';
 
 export class AsideContainer extends Component {
 	render() {
