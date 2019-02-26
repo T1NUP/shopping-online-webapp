@@ -29,6 +29,18 @@
       "category": "jacket",
       "cost": "$50",
       "id": 7
+    },
+    {
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50",
+      "id": 8
+    },
+    {
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50",
+      "id": 9
     }
   ],
   "token": {
