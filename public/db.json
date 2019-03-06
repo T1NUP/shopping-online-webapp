@@ -1,0 +1,109 @@
+{
+  "products": [
+    {
+      "id": 3,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "id": 4,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "id": 5,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "id": 6,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "id": 7,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "id": 8,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "id": 9,
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50"
+    },
+    {
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50",
+      "id": 10
+    },
+    {
+      "name": "black jacket",
+      "category": "jacket",
+      "cost": "$50",
+      "id": 11
+    }
+  ],
+  "new-arrivals": [
+    {
+      "id": 1,
+      "nameImage": "model1",
+      "type": "sale",
+      "productName": "Berry Lace Dress",
+      "unitPrice": "$500"
+    },
+    {
+      "id": 2,
+      "nameImage": "model2",
+      "type": "",
+      "productName": "Berry Lace Dress2",
+      "unitPrice": "$399"
+    },
+    {
+      "id": 3,
+      "nameImage": "model6",
+      "type": "",
+      "productName": "Berry Lace Dress3",
+      "unitPrice": "$90"
+    },
+    {
+      "id": 4,
+      "nameImage": "model4",
+      "type": "new",
+      "productName": "Berry Lace Dress4",
+      "unitPrice": "$2000"
+    },
+    {
+      "id": 5,
+      "nameImage": "model5",
+      "type": "",
+      "productName": "Berry Lace Dress5",
+      "unitPrice": "$99"
+    },
+    {
+      "id": 6,
+      "nameImage": "model3",
+      "type": "sale",
+      "productName": "Berry Lace Dress6",
+      "unitPrice": "$120"
+    },
+    {
+      "id": 7,
+      "imageName": "model7",
+      "type": "new",
+      "productName": "Berry Lace Dress7",
+      "unitPrice": "$100"
+    }
+  ]
+}

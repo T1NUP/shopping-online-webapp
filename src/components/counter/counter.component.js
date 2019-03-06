@@ -1,51 +1,34 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 import { store } from "../../App";
 import { DECREASE, INCREASE } from "../../actions/actions";
 import './counter.component.scss';
 
-export class CounterComponent extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      counter: store.getState().counter
-    }
-    this.unsubscribe = store.subscribe(() => {
-      this.setState({
-        counter: store.getState().counter
-      });
-    });
-    
-  }
-
-  componentWillUnmount = () => {
-    this.unsubscribe();
-  }
-
-  increase = () => {
-    store.dispatch({
-      type: INCREASE,
-      payload: { step: 2 }
-    });
-  }
-
-  decrease = () => {
-    store.dispatch({
-      type: DECREASE,
-      payload: { step: 2 }
-    });
-  }
+class CounterComponent extends Component {
 
   render() {
+    console.log(this.props);
     return (
       <div className="counter">
-        <h4>This is Counter components</h4>
-        <h3>{ this.state.counter }</h3>
+        <h4>{ this.props.counter }</h4>
         <div>
-          <button onClick={ this.increase }>Increase</button>
-          <button onClick={ this.decrease }>Decrease</button>
+          <button onClick={ this.props.increase }>Increase</button>
+          <button onClick={ this.props.decrease }>Decrease</button>
         </div>
       </div>
     )
   }
 }
+
+const mapStateToProps = (state, ownProps) => {
+  return { counter: state.counter }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    increase: (data) => dispatch({ type: INCREASE, payload: { step: 2 } }),
+    decrease: (data) => dispatch({ type: DECREASE, payload: { step: 2 } }),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CounterComponent);
