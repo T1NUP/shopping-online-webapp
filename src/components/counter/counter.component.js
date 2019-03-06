@@ -7,7 +7,6 @@ import './counter.component.scss';
 class CounterComponent extends Component {
 
   render() {
-    console.log(this.props);
     return (
       <div className="counter">
         <h4>{ this.props.counter }</h4>
