@@ -14,3 +14,15 @@ export const HIDE_LOADING = 'HIDE_LOADING';
 
 // new arrivals 
 export const GET_NEW_ARRIVALS = 'GET_NEW_ARRIVALS';
+
+// three items 
+export const GET_THREE_ITEMS = 'GET_THREE_ITEMS';
+
+// two items 
+export const GET_TWO_ITEMS = 'GET_TWO_ITEMS';
+// popular cart item
+export const  GET_NEW_POPULAR = ' GET_NEW_POPULAR';
+// cart 
+export const GET_CART = 'GET_CART';
+//delete cart
+export const DELETE_CART_ITEM = 'DELETE_CART_ITEM';

@@ -4,6 +4,7 @@ import { LoginContainer }   from './containers/login/login.container';
 import { HeaderContainer }  from './containers/header/header.container';
 import { FooterContainer }  from './containers/footer/footer.container';
 import { AsideContainer } 	from './containers/aside/aside.container';
+import cartContainer from './containers/carts/cart.container';
 
 
 export const routes = [
@@ -36,8 +37,19 @@ export const routes = [
 		sidebar    : AsideContainer,
 		header     : HeaderContainer,
 		footer     : FooterContainer,
-		showSidebar: true,
+		showSidebar: false,
 		showHeader : true,
 		showFooter : true,
-	}
+    },
+    {
+		path       : "/cart",
+		exact      : true,
+		component  : cartContainer,
+		sidebar    : AsideContainer,
+		header     : HeaderContainer,
+		footer     : FooterContainer,
+		showSidebar: false,
+		showHeader : true,
+		showFooter : true,
+    }
 ];

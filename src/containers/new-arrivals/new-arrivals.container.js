@@ -1,24 +1,17 @@
 import React, { Component } from 'react';
-import { store } from "../../App";
 import { http } from '../../services/http.service';
 import { GET_NEW_ARRIVALS } from "../../actions/actions";
 import { ProductItem } from '../product-item/product-item.container';
+import { connect } from 'react-redux';
 
-export class NewArrivals extends Component {
+class NewArrivals extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      newArrivals: store.getState().newArrivals
-    }
-    this.unsubscribe = store.subscribe(() => {
-      this.setState({
-        newArrivals: store.getState().newArrivals
-      });
-    });
-  }
+      newArrivals: []
+    };
+    console.log(this.props.newArrivals)
 
-  componentWillUnmount = () => {
-    this.unsubscribe();
   }
 
   componentDidMount = () => {
@@ -26,26 +19,19 @@ export class NewArrivals extends Component {
   }
 
   getNewArrivals = () => {
-    http.get('new-arrivals').then(data => {
-      console.log(data);
-      store.dispatch({
-        type: GET_NEW_ARRIVALS,
-        payload: {
-          newArrivals: data.data
-        }
-      });
+    http.get('new-arrivals').then(res => {
+      this.props.getNewArrivals(res.data);
     });
   }
   render() {
-    const newArrivals = this.state.newArrivals;
     return (
       <div className="row margin-bottom-40">
         <div className="col-md-12 sale-product">
           <h2>New Arrivals</h2>
           <div className="owl-carousel owl-carousel5">
             {
-              newArrivals.map(val =>
-                <ProductItem inforItem={val} >
+              this.props.newArrivals.map((val, i) =>
+                <ProductItem inforItem={val} key={i} styleWith={'228px'} >
                 </ProductItem>
               )}
           </div>
@@ -54,3 +40,18 @@ export class NewArrivals extends Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    newArrivals: state.newArrivals
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getNewArrivals: (response) => dispatch({ type: GET_NEW_ARRIVALS, payload: { newArrivals: response } })
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewArrivals);
+

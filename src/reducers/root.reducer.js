@@ -4,11 +4,19 @@ import { basket } 					from "./basket.reducer";
 import { counter } 			from "./couter.reducer";
 import { loading } 					from './loading.reducer';
 import { newArrivals } from './newArrivals.reducer';
+import { threeItems } from './threeItems.reducer';
+import { twoItems } from './twoItems.reducer';
+import { carts } from './cart.reducer';
+import { newPopular } from './newPopular.reducer';
 
 export const rootReducer = combineReducers({
 	loading,
 	products,
 	newArrivals,
 	basket,
-	counter
+	counter,
+	threeItems,
+    twoItems,
+    newPopular,
+    carts
 });

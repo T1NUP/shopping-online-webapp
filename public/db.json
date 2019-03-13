@@ -90,20 +90,45 @@
       "type": "",
       "productName": "Berry Lace Dress5",
       "unitPrice": "$99"
-    },
+    }
+  ],
+  "three-items": [
     {
-      "id": 6,
-      "nameImage": "model3",
-      "type": "sale",
-      "productName": "Berry Lace Dress6",
-      "unitPrice": "$120"
-    },
-    {
-      "id": 7,
-      "imageName": "model7",
+      "id": 1,
+      "nameImage": "k1",
       "type": "new",
-      "productName": "Berry Lace Dress7",
-      "unitPrice": "$100"
+      "productName": "Berry Lace Dress",
+      "unitPrice": "$500"
+    },
+    {
+      "id": 2,
+      "nameImage": "k2",
+      "type": "",
+      "productName": "Berry Lace Dress2",
+      "unitPrice": "$399"
+    },
+    {
+      "id": 3,
+      "nameImage": "k3",
+      "type": "",
+      "productName": "Berry Lace Dress3",
+      "unitPrice": "$90"
+    }
+  ],
+  "two-items": [
+    {
+      "id": 1,
+      "nameImage": "k4",
+      "type": "new",
+      "productName": "Berry Lace Dress",
+      "unitPrice": "$500"
+    },
+    {
+      "id": 2,
+      "nameImage": "k3",
+      "type": "",
+      "productName": "Berry Lace Dress2",
+      "unitPrice": "$399"
     }
   ]
 }

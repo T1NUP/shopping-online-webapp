@@ -1,6 +1,7 @@
+
 import React, { Component } from 'react';
 
-export class ProductItem extends Component {
+export class PopularItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -53,7 +54,7 @@ export class ProductItem extends Component {
               </div>
             </div>
             <h3><a href="shop-item.html">{this.props.inforItem.productName}</a></h3>
-            <div className="pi-price">{this.props.inforItem.unitPrice}</div>
+            <div className="pi-price">${this.props.inforItem.unitPrice}</div>
             <button className="btn btn-default add2cart" style={this.state.styleButton} onClick={this.addToCart}>{this.state.textButton}</button>
             {typeProduct}
           </div>
@@ -62,3 +63,4 @@ export class ProductItem extends Component {
     );
   }
 }
+export default PopularItem;
