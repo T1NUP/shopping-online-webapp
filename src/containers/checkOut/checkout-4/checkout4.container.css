@@ -1,0 +1,22 @@
+.star {
+  color: red;
+}
+.btn-checkout3 {
+  color: #fff;
+  background: orangered;
+  float: right;
+  border-radius: 0;
+  margin-top: 20px;
+}
+.btn-checkout3:hover {
+  color: #fff;
+}
+.P_last {
+  margin-top: 20px;
+}
+.boder-text {
+  border-radius: 0;
+}
+.messCheckout4 {
+  color: red;
+}

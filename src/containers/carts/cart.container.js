@@ -6,28 +6,19 @@ import TotalPriceCart from './totalPriceCart';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PopularCart from '../popularCart/popularCart.container';
+import './cart.scss';
 class Cartcontainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      carts: []
-    };
-    // console.log(this.state.carts)
-  }
-  componentDidMount = () => {
+  componentDidMount() {
     this.newCart();
-  };
+  }
   newCart = () => {
     http.get('carts').then(res => {
       this.props.newCart(res.data);
-      this.setState({
-        carts: res.data
-      });
     });
   };
   fillIndex = id => {
-    var { carts } = this.props;
-    var result = -1;
+    let { carts } = this.props;
+    let result = -1;
     carts.forEach((cart, index) => {
       if (cart.id === id) {
         result = index;
@@ -37,45 +28,41 @@ class Cartcontainer extends Component {
   };
   //   ...
   increase = id => {
-    var { carts } = this.state;
-    var index = this.fillIndex(id);
-    if (index !== -1) {
+    let { carts } = this.props;
+    let index = this.fillIndex(id);
+    if (index !== -1 && carts[index].quantity !== 0) {
       carts[index].quantity = carts[index].quantity + 1;
       this.setState({
         carts: carts
       });
-      http.put(`carts/${id}`, carts[index]).then(res => {});
+      http.put(`carts/${id}`, carts[index]).then(res => { });
+      this.newCart();
     }
   };
   decrease = id => {
-    var { carts } = this.state;
-    var index = this.fillIndex(id);
-    if (index !== -1) {
+    let { carts } = this.props;
+    let index = this.fillIndex(id);
+    if (index !== -1 && carts[index].quantity !== 0) {
       if (carts[index].quantity > 1) {
         carts[index].quantity = carts[index].quantity - 1;
-        this.setState({
-          carts: carts
-        });
-        http.put(`carts/${id}`, carts[index]).then(res => {});
+        http.put(`carts/${id}`, carts[index]).then(res => { });
+        this.newCart();
       }
       if (carts[index].quantity === 1) {
         carts[index].quantity = 1;
-        this.setState({
-          carts: carts
-        });
-        http.put(`carts/${id}`, carts[index]).then(res => {});
+        http.put(`carts/${id}`, carts[index]).then(res => { });
+        this.newCart();
       }
     }
   };
-//   ..............deleteCartItem
+  //   ..............deleteCartItem
   onDeleteCart = id => {
     this.props.deleteCart(id);
-    http.delete(`carts/${id}`).then(res => {
-    });
+    http.delete(`carts/${id}`).then(res => { });
   };
   render() {
-    var { carts } = this.props;
-    var elementItem = carts.map((cart, index) => {
+    let { carts } = this.props;
+    let elementItem = carts.map((cart, index) => {
       return (
         <CartItem
           key={index}

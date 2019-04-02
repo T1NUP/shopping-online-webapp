@@ -239,6 +239,7 @@ export class AccountContainer extends Component {
                       type="radio"
                       id="male"
                       name="gender"
+                      defaultChecked
                       onChange={this.onHandleChange}
                       defaultValue="male"
                     />

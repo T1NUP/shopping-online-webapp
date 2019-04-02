@@ -1,0 +1,39 @@
+.pagination {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  li,
+  a {
+    border-radius: 50% !important;
+    border-color: #ffffff !important;
+  }
+  .ant-pagination-item-link {
+    &:hover {
+      background-color: #e0e0e0;
+      border-color: #e0e0e0;
+      color: #1f2032;
+    }
+  }
+  .anticon {
+    vertical-align: 2px;
+  }
+  .ant-pagination-item {
+    &:hover {
+      background-color: #e0e0e0;
+      border-color: #e0e0e0;
+      a {
+        color: #1f2032;
+      }
+    }
+    &-active,
+    &-active:hover,
+    &-active:focus {
+      border-color: #555555;
+      background: #555555;
+      a {
+        color: #ffffff;
+      }
+    }
+  }
+}

@@ -5,10 +5,8 @@ import { VerticalCategory } from '../vertical-category/vertical-category.contain
 import { PictureCarousel } from '../picture-carousel/picture-carousel.container';
 import ThreeItems from '../../containers/three-items/three-items.container';
 import TwoItems from '../../containers/two-items/two-items.container';
-import CounterComponent from "../../components/counter/counter.component";
 
 export class HomeContainer extends Component {
-
   render() {
     return (
       <>
@@ -26,11 +24,7 @@ export class HomeContainer extends Component {
             </div>
           </div>
         </div>
-        <CounterComponent />
       </>
     );
   }
-
 }
-
-

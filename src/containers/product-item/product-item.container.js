@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class ProductItem extends Component {
   constructor(props) {
@@ -10,11 +11,9 @@ export class ProductItem extends Component {
         border: '1px #ededed solid'
       }
     };
-
-    this.addToCart = this.addToCart.bind(this);
   }
 
-  addToCart() {
+  addToCart = () => {
     this.setState({
       textButton: 'ADDED',
       styleButton: {
@@ -22,20 +21,21 @@ export class ProductItem extends Component {
         color: '#1aa71a'
       }
     });
-  }
+    this.props.addToCart(this.props.inforItem.id);
+  };
   render() {
     let typeProduct = '';
     switch (this.props.inforItem.type) {
       case 'sale':
-        typeProduct = <div className="sticker sticker-sale"></div>;
+        typeProduct = <div className="sticker sticker-sale" />;
         break;
       case 'new':
-        typeProduct = <div className="sticker sticker-new"></div>;
+        typeProduct = <div className="sticker sticker-new" />;
         break;
       default:
         typeProduct = '';
         break;
-    };
+    }
     const imgStyle = {
       width: this.props.styleWith,
       marginRight: '0px'
@@ -46,15 +46,42 @@ export class ProductItem extends Component {
         <div>
           <div className="product-item">
             <div className="pi-img-wrapper">
-              <img src={`assets/pages/img/products/${this.props.inforItem.nameImage}.jpg`} className="img-responsive" alt={this.props.inforItem.productName} />
+              <img
+                src={`/assets/pages/img/products/${
+                  this.props.inforItem.nameImage
+                  }.jpg`}
+                className="img-responsive"
+                alt={this.props.inforItem.productName}
+              />
               <div>
-                <a href={`assets/pages/img/products/${this.props.inforItem.nameImage}.jpg`} className="btn btn-default fancybox-button">Zoom</a>
-                <a href="#product-pop-up" className="btn btn-default fancybox-fast-view">View</a>
+                <a
+                  href={`assets/pages/img/products/${
+                    this.props.inforItem.nameImage
+                    }.jpg`}
+                  className="btn btn-default fancybox-button"
+                >
+                  Zoom
+                </a>
+                <Link
+                  to={{ pathname: `product-detail/${this.props.inforItem.id}` }}
+                  className="btn btn-default fancybox-fast-view"
+                >
+                  View
+                </Link>
+
               </div>
             </div>
-            <h3><a href="shop-item.html">{this.props.inforItem.productName}</a></h3>
-            <div className="pi-price">{this.props.inforItem.unitPrice}</div>
-            <button className="btn btn-default add2cart" style={this.state.styleButton} onClick={this.addToCart}>{this.state.textButton}</button>
+            <h3>
+              <a href="shop-item.html">{this.props.inforItem.productName}</a>
+            </h3>
+            <div className="pi-price">${this.props.inforItem.cost}</div>
+            <button
+              className="btn btn-default add2cart"
+              style={this.state.styleButton}
+              onClick={this.addToCart}
+            >
+              {this.state.textButton}
+            </button>
             {typeProduct}
           </div>
         </div>

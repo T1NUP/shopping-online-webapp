@@ -1,182 +1,502 @@
 {
   "products": [
     {
-      "id": 3,
-      "name": "black jacket",
+      "id": "22dssdsass",
+      "productName": "black jacket",
+      "nameImage": "model2",
+      "type": "new",
       "category": "jacket",
-      "cost": "$50"
+      "availability": "in stock",
+      "cost": 23,
+      "arrImage": ["k1", "k2", "k3"],
+      "valueSale": 0,
+      "size": ["S", "M", "L", "XL"],
+      "color": ["red", "yellow", "green"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "comments": [
+        {
+          "id": "comment_1",
+          "name": "comment_name_1",
+          "email": "email1@gmail.com",
+          "review": "san pham khong ra gi",
+          "ratting": 4,
+          "createAt": "30/09/2019 14:23"
+        },
+        {
+          "id": "comment_2",
+          "name": "comment_name_2",
+          "email": "email2@gmail.com",
+          "review": "san pham kha an tuong",
+          "ratting": 2,
+          "createAt": "30/09/2019 14:23"
+        },
+        {
+          "id": "comment_3",
+          "name": "comment_name_3",
+          "email": "email3@gmail.com",
+          "review": "toi thay kha an tuong voi san pham",
+          "ratting": 5,
+          "createAt": "30/09/2019 14:23"
+        },
+        {
+          "id": "ec3d51ce-2bee-4610-9d6a-173503e7bddb",
+          "name": "adsfdsaf",
+          "email": "tieppt@gmail.com",
+          "review": "ầdsfadsfasdf",
+          "ratting": 3,
+          "createAt": "2019-03-26T02:41:14.809Z"
+        },
+        {
+          "id": "c2971933-9854-4c9f-9aa6-75eb6269fc59",
+          "name": "Hanh",
+          "email": "thaydoidelammoi3@gmail.com",
+          "review": "ádgsgdgjrhr",
+          "ratting": 4,
+          "createAt": "2011-04-11T04:51:00.000Z"
+        }
+      ]
     },
     {
-      "id": 4,
-      "name": "black jacket",
+      "id": "22dsss23fs",
+      "productName": "black jacket",
+      "nameImage": "model3",
+      "type": "sale",
       "category": "jacket",
-      "cost": "$50"
+      "availability": "not available",
+      "cost": 45,
+      "arrImage": ["k1", "k2", "k3"],
+      "valueSale": 10,
+      "size": ["S", "M"],
+      "color": ["red", "green"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "comments": [
+        {
+          "id": "comment_1",
+          "name": "comment_name_1",
+          "email": "email1@gmail.com",
+          "review": "san pham khong ra gi",
+          "ratting": 4,
+          "createAt": "30/09/2019 14:23"
+        }
+      ]
     },
     {
-      "id": 5,
-      "name": "black jacket",
+      "id": "22dsssbd6",
+      "productName": "black jacket",
+      "nameImage": "model4",
+      "type": "sale",
       "category": "jacket",
-      "cost": "$50"
+      "availability": "in stock",
+      "cost": 43,
+      "arrImage": ["k1", "k2", "k3"],
+      "valueSale": 50,
+      "size": ["L", "XL"],
+      "color": ["red"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "comments": [
+        {
+          "id": "comment_1",
+          "name": "comment_name_1",
+          "email": "email1@gmail.com",
+          "review": "san pham khong ra gi",
+          "ratting": 4,
+          "createAt": "30/09/2019 14:23"
+        },
+        {
+          "id": "comment_3",
+          "name": "comment_name_3",
+          "email": "email3@gmail.com",
+          "review": "toi thay kha an tuong voi san pham",
+          "ratting": 5,
+          "createAt": "30/09/2019 14:23"
+        }
+      ]
     },
     {
-      "id": 6,
-      "name": "black jacket",
+      "id": "22dsss333",
+      "productName": "black jacket",
+      "nameImage": "model5",
       "category": "jacket",
-      "cost": "$50"
+      "availability": "not available",
+      "type": "new",
+      "cost": 15,
+      "arrImage": ["k1", "k2", "k3"],
+      "valueSale": 0,
+      "size": ["S", "M", "L", "XL"],
+      "color": ["red", "yellow", "green"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "comments": [
+        {
+          "id": "comment_2",
+          "name": "comment_name_2",
+          "email": "email2@gmail.com",
+          "review": "san pham kha an tuong",
+          "ratting": 2,
+          "createAt": "2019-03-26T03:12:08.688Z"
+        },
+        {
+          "id": "83e1ac3e-fdb9-44e0-8400-0b90ae41eb8f",
+          "name": "adfadfs",
+          "email": "tieppt@gmail.com",
+          "review": "asdfasdf asdfasdf",
+          "ratting": 2,
+          "createAt": "2019-03-26T03:12:08.688Z"
+        },
+        {
+          "id": "04906362-816c-4f22-bf92-c0f358578e3f",
+          "name": "adsfdsaf",
+          "email": "tieppt@gmail.com",
+          "review": "adsfadsf",
+          "ratting": 3,
+          "createAt": "2019-03-26T03:12:08.688Z"
+        },
+        {
+          "id": "6b368693-ed0f-4db5-b6a2-8d4b7bc51fd0",
+          "name": "adsfdsaf",
+          "email": "traitimquykaka96@gmail.com",
+          "review": "fmhgvfgh",
+          "ratting": 2,
+          "createAt": "2019-03-26T03:25:57.127Z"
+        },
+        {
+          "id": "13449ac8-fde4-4388-99f2-324d48d0a1a1",
+          "name": "Hanh",
+          "email": "tieppt@gmail.com",
+          "review": "dgfdsgergvcrhe",
+          "ratting": 2,
+          "createAt": "2019-03-26T03:34:59.563Z"
+        }
+      ]
     },
     {
-      "id": 7,
-      "name": "black jacket",
+      "id": "22dsss888",
+      "productName": "black jacket",
+      "nameImage": "model6",
+      "type": "sale",
       "category": "jacket",
-      "cost": "$50"
+      "availability": "not available",
+      "cost": 70,
+      "arrImage": ["k1", "k2", "k3"],
+      "valueSale": 15,
+      "size": ["S", "M", "L", "XL"],
+      "color": ["red", "yellow", "green"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "comments": [
+        {
+          "id": "comment_1",
+          "name": "comment_name_1",
+          "email": "email1@gmail.com",
+          "review": "san pham khong ra gi",
+          "ratting": 4,
+          "createAt": "2019-03-26T03:12:08.688Z"
+        },
+        {
+          "id": "comment_2",
+          "name": "comment_name_2",
+          "email": "email2@gmail.com",
+          "review": "san pham kha an tuong",
+          "ratting": 2,
+          "createAt": "2019-03-26T03:12:08.688Z"
+        },
+        {
+          "id": "comment_3",
+          "name": "comment_name_3",
+          "email": "email3@gmail.com",
+          "review": "toi thay kha an tuong voi san pham",
+          "ratting": 5,
+          "createAt": "2019-03-26T03:12:08.688Z"
+        }
+      ]
     },
     {
-      "id": 8,
-      "name": "black jacket",
+      "id": "22dsss999",
+      "productName": "black jacket",
+      "nameImage": "model7",
       "category": "jacket",
-      "cost": "$50"
+      "availability": "in stock",
+      "type": "new",
+      "cost": 50,
+      "arrImage": ["k1", "k2", "k3"],
+      "valueSale": 0,
+      "size": ["S", "M", "L", "XL"],
+      "color": ["red", "yellow", "green"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "comments": [
+        {
+          "id": "comment_3",
+          "name": "comment_name_3",
+          "email": "email3@gmail.com",
+          "review": "toi thay kha an tuong voi san pham",
+          "ratting": 5,
+          "createAt": "30/09/2019 14:23"
+        }
+      ]
     },
     {
-      "id": 9,
-      "name": "black jacket",
+      "productName": "black jacket",
       "category": "jacket",
-      "cost": "$50"
+      "availability": "not available",
+      "nameImage": "model1",
+      "type": "sale",
+      "cost": 123,
+      "id": "22dsss1010",
+      "arrImage": ["k1", "k2", "k3"],
+      "valueSale": 30,
+      "size": ["S", "M", "L", "XL"],
+      "color": ["red", "yellow", "green"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "comments": []
     },
     {
-      "name": "black jacket",
+      "productName": "black jacket",
       "category": "jacket",
-      "cost": "$50",
-      "id": 10
+      "availability": "in stock",
+      "nameImage": "model2",
+      "type": "sale",
+      "cost": 53,
+      "id": "22dsss1111",
+      "arrImage": ["k1", "k2", "k3"],
+      "valueSale": 10,
+      "size": ["S", "M", "L", "XL"],
+      "color": ["red", "yellow", "green"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "comments": []
     },
     {
-      "name": "black jacket",
+      "id": "22dsss231234",
+      "productName": "black jacket",
       "category": "jacket",
-      "cost": "$50",
-      "id": 11
+      "availability": "in stock",
+      "nameImage": "model2",
+      "type": "sale",
+      "cost": 53,
+      "arrImage": ["k1", "k2", "k3"],
+      "valueSale": 10,
+      "size": ["S", "M", "L", "XL"],
+      "color": ["red", "yellow", "green"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "comments": []
     }
   ],
   "new-arrivals": [
     {
-      "id": 1,
+      "id": "22dsss5454",
       "nameImage": "model1",
       "type": "sale",
       "productName": "Berry Lace Dress",
-      "unitPrice": "$500"
+      "cost": 500
     },
     {
-      "id": 2,
+      "id": "22dsss879",
       "nameImage": "model2",
       "type": "",
       "productName": "Berry Lace Dress2",
-      "unitPrice": "$399"
+      "cost": 399
     },
     {
-      "id": 3,
+      "id": "22dsssss2",
       "nameImage": "model6",
       "type": "",
       "productName": "Berry Lace Dress3",
-      "unitPrice": "$90"
+      "cost": 90
     },
     {
-      "id": 4,
+      "id": "22dsss24scb",
       "nameImage": "model4",
       "type": "new",
       "productName": "Berry Lace Dress4",
-      "unitPrice": "$2000"
+      "cost": 2000
     },
     {
-      "id": 5,
+      "id": "22dsss22232",
       "nameImage": "model5",
       "type": "",
       "productName": "Berry Lace Dress5",
-      "unitPrice": "$99"
+      "cost": 99
     }
   ],
   "three-items": [
     {
-      "id": 1,
+      "id": "22dsssdcx23",
       "nameImage": "k1",
       "type": "new",
       "productName": "Berry Lace Dress",
-      "unitPrice": "$500"
+      "cost": 500
     },
     {
-      "id": 2,
+      "id": "22dssssa2323",
       "nameImage": "k2",
       "type": "",
       "productName": "Berry Lace Dress2",
-      "unitPrice": "$399"
+      "cost": 399
     },
     {
-      "id": 3,
+      "id": "22dsss5156565",
       "nameImage": "k3",
       "type": "",
       "productName": "Berry Lace Dress3",
-      "unitPrice": "$90"
+      "cost": 90
     }
   ],
   "two-items": [
     {
-      "id": 1,
+      "id": "22dsss231234",
       "nameImage": "k4",
       "type": "new",
       "productName": "Berry Lace Dress",
-      "unitPrice": "$500"
+      "cost": 500
     },
     {
-      "id": 2,
+      "id": "22dsss2285656",
       "nameImage": "k3",
       "type": "",
       "productName": "Berry Lace Dress2",
-      "unitPrice": "$399"
+      "cost": 99
     }
   ],
   "popular-products": [
     {
-      "id": 1,
+      "id": "22dsss2313213565",
       "nameImage": "k4",
       "type": "new",
       "productName": "Berry Lace Dress",
-      "unitPrice": 500
+      "cost": 500
     },
     {
-      "id": 2,
+      "id": "22dsss33338",
       "nameImage": "k2",
       "type": "",
       "productName": "Berry Lace Dress2",
-      "unitPrice": 399
+      "cost": 399
     },
     {
-      "id": 12,
+      "id": "22dsssdfa323",
       "nameImage": "k3",
       "type": "sale",
       "productName": "Berry Lace Dress",
-      "unitPrice": 500
+      "cost": 500
     },
     {
-      "id": 3,
+      "id": "22dsss455853",
       "nameImage": "k3",
       "type": "",
       "productName": "Berry Lace Dress3",
-      "unitPrice": 90
+      "cost": 90
     }
   ],
   "carts": [
     {
-      "id": 8211,
-      "name": "black 33",
+      "productName": "black jacket",
       "category": "jacket",
-      "cost": 50,
-      "nameImage": "model1",
-      "quantity": 7
+      "availability": "in stock",
+      "nameImage": "model2",
+      "type": "sale",
+      "cost": 53,
+      "id": "22dsss1111",
+      "arrImage": ["k1", "k2", "k3"],
+      "valueSale": 10,
+      "size": ["S", "M", "L", "XL"],
+      "color": ["red", "yellow", "green"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "comments": [],
+      "quantity": 3
     },
     {
-      "id": 818,
-      "name": "black 33",
+      "id": "22dsss888",
+      "productName": "black jacket",
+      "nameImage": "model6",
+      "type": "sale",
       "category": "jacket",
-      "cost": 50,
+      "availability": "not available",
+      "cost": 70,
+      "arrImage": ["k1", "k2", "k3"],
+      "valueSale": 15,
+      "size": ["S", "M", "L", "XL"],
+      "color": ["red", "yellow", "green"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
+      "comments": [
+        {
+          "id": "comment_1",
+          "name": "comment_name_1",
+          "email": "email1@gmail.com",
+          "review": "san pham khong ra gi",
+          "ratting": 4,
+          "createAt": "2019-03-26T03:12:08.688Z"
+        },
+        {
+          "id": "comment_2",
+          "name": "comment_name_2",
+          "email": "email2@gmail.com",
+          "review": "san pham kha an tuong",
+          "ratting": 2,
+          "createAt": "2019-03-26T03:12:08.688Z"
+        },
+        {
+          "id": "comment_3",
+          "name": "comment_name_3",
+          "email": "email3@gmail.com",
+          "review": "toi thay kha an tuong voi san pham",
+          "ratting": 5,
+          "createAt": "2019-03-26T03:12:08.688Z"
+        }
+      ],
+      "quantity": 1
+    },
+    {
+      "id": "22dsss5454",
       "nameImage": "model1",
-      "quantity": 2
+      "type": "sale",
+      "productName": "Berry Lace Dress",
+      "cost": 500,
+      "quantity": 1
+    },
+    {
+      "id": "22dsss879",
+      "nameImage": "model2",
+      "type": "",
+      "productName": "Berry Lace Dress2",
+      "cost": 399,
+      "quantity": 1
+    }
+  ],
+  "accounts": [
+    {
+      "id": "12dccc",
+      "address": "Hà Nội Việt Nam",
+      "email": "duyduong240798@gmail.com",
+      "fullName": "Kieu",
+      "gender": "Male",
+      "password": "Duongkd247",
+      "phone": "0965067698"
+    }
+  ],
+  "subcriber": [],
+  "aboutUs": [
+    {
+      "id": "12ccc2",
+      "infor": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sit nonummy nibh euismod tincidunt ut laoreet dolore magna aliquarm erat sit volutpat. Nostrud exerci tation ullamcorper suscipit lobortis nisl   aliquip commodo consequat.Duis autem vel eum iriure dolor vulputate velit esse molestie at dolore."
+    }
+  ],
+  "contacts": [
+    {
+      "id": "123xgee",
+      "address": "35, Lorem Lis Street, Park Ave  ",
+      "country": "California, US",
+      "phone": "300 323 3456",
+      "fax": "300 323 1456",
+      "email": "info@metronic.com",
+      "skype": " metronic"
     }
   ],
   "token": {

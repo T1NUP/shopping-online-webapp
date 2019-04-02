@@ -1,80 +1,91 @@
 .cart {
-    &__shopping {
-        padding: 10px;
-        background: white;
-        table {
-          border: none;
-          tbody tr {
-            border-bottom: 2px solid #d6d2ca;
-            img {
-              width: 60px;
-            }
-            .number-color {
-              color: #fb6103;
-              font-size: 15px;
-              font-weight: 600;
-            }
-            .quantityPro {
-              display: flex;
-              .number {
-                background: #d2d2d2;
-                font-size: 20px;
-                padding: 10px 22px;
-              }
-              .control {
-                margin-left: 3px;
-                div {
-                  background: #d2d2d2;
-                  padding: 5px 5px;
-                }
-                div:last-child {
-                  margin-top: 3px;
-                }
-              }
-            }
-          }
+  &__shopping {
+    padding: 10px;
+    background: white;
+    table {
+      border: none;
+      overflow-x: auto;
+      width: 100%;
+        @media only screen and (max-width: 575px) {
+          display: block !important;
         }
-        .totalPriceCart {
+      font-weight: 500;
+      overflow: auto;
+      @media screen and (max-width: 500px) {
+        display: block;
+      }
+      tbody tr {
+        border-bottom: 2px solid #d6d2ca;
+        img {
+          width: 60px;
+        }
+        .number-color {
+          color: #fb6103;
+          font-size: 15px;
+          font-weight: 600;
+        }
+        .quantityPro {
           display: flex;
-          &__content {
-            margin-left: auto;
-            width: 200px;
-            .row {
-              border-bottom: 1px solid #c2bdbd;
-              padding-top: 8px;
-              .text {
-                font-size: 15px;
-                font-weight: 600;
-              }
-              .number {
-                color: #fb6103;
-                font-size: 13px;
-                font-weight: 600;
-              }
+          .number {
+            background: #d2d2d2;
+            font-size: 20px;
+            padding: 10px 22px;
+          }
+          .control {
+            margin-left: 3px;
+            button {
+              border: none;
+              background: #d2d2d2;
+              outline: none;
+            }
+            div:last-child {
+              margin-top: 3px;
             }
           }
-          // justify-content: end;
         }
       }
-     &__button {
-         a {
-             text-decoration: none;
-             font-weight: 600;
-             font-size: 12px;
-         }
-         .btn-continue {
-             button {
-                 background: #11bdce;
-                 &:hover {
-                     opacity: 0.7;
-                 }
-             }
-         }
-         .btn-checkout {
-            background: #fb6103;
-            &:hover {
-                opacity: 0.7;
-            }
-         }
-     } 
+    }
+    .totalPriceCart {
+      display: flex;
+      &__content {
+        margin-left: auto;
+        width: 200px;
+        .row {
+          border-bottom: 1px solid #c2bdbd;
+          padding-top: 8px;
+          .text {
+            font-size: 15px;
+            font-weight: 600;
+          }
+          .number {
+            color: #fb6103;
+            font-size: 13px;
+            font-weight: 600;
+          }
+        }
+      }
+      // justify-content: end;
+    }
+  }
+  &__button {
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .btn-continue {
+      button {
+        background: #11bdce;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    .btn-checkout {
+      background: #fb6103;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
 }

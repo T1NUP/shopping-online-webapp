@@ -1,0 +1,74 @@
+.filter-product {
+  background-color: white;
+  h2,
+  h3 {
+    text-transform: uppercase;
+  }
+  .ant-slider-handle {
+    width: 9px;
+    height: 22px;
+    background-color: #777777;
+    margin-top: -9px;
+    border: none;
+  }
+  .ant-slider-track {
+    height: 8px;
+    background-color: #ffb848;
+  }
+  .ant-slider:hover .ant-slider-track {
+    background-color: #ffb848;
+  }
+  .ant-slider-rail {
+    height: 8px;
+    background: #e1e1e1;
+  }
+  .avai_checkbox {
+    color: #3e4d5c;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.26px;
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked {
+        & ~ .check-mark {
+          background-color: #2196f3;
+        }
+        & ~ .check-mark:after {
+          display: block;
+        }
+      }
+    }
+    .check-mark:after {
+      left: 4px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+  .check-mark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    &:after {
+      content: '';
+      position: absolute;
+      display: none;
+    }
+  }
+}

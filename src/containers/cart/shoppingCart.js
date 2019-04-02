@@ -125,10 +125,9 @@ class ShoppingCart extends Component {
             </div>
           </div>
         </div>
-        <div className="popular-product"></div>
+        <div className="popular-product" />
       </div>
     );
   }
 }
-
 export default ShoppingCart;

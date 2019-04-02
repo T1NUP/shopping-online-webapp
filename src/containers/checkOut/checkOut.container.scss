@@ -1,0 +1,17 @@
+.frame-checkout {
+  background: white;
+  & .title {
+    text-transform: uppercase;
+    color: white;
+    background: #ccc;
+    margin-bottom: 5px;
+    border: 0;
+    .contents {
+      text-transform: initial;
+    }
+  }
+}
+
+select.form-control {
+  height: calc(2.1em + 0.75rem + 2px);
+}

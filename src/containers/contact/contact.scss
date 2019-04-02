@@ -1,0 +1,36 @@
+.category-sidebar {
+  .sidebar {
+    min-width: 100%;
+    padding: 0;
+  }
+}
+.contact-form {
+  background-color: #fff;
+}
+.lower-section {
+  input,
+  textarea {
+    border: 1px solid #dbdbdb;
+  }
+  .btn-submit {
+    background-color: #e94d1c;
+    color: white;
+  }
+  margin-bottom: 3rem;
+}
+.icon {
+  i {
+    font-size: 22px;
+    margin-right: 5px;
+    color: gray;
+  }
+  .fa-facebook-square:hover {
+    color: #4267B2
+  }
+  .fa-linkedin-square:hover {
+    color: #007FB1; 
+  }
+  .fa-google-plus-square:hover {
+    color: #D14836
+  }
+}

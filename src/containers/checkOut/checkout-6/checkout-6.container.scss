@@ -1,0 +1,62 @@
+.text-orange{
+    color: tomato;
+}
+table.cart{
+    th{
+        text-transform: uppercase
+    }
+    th:nth-child(2){
+        padding-left:2em;
+    }
+    tbody{
+        tr{
+            td:first-child{
+                width: 10%;
+            }
+            
+            td:nth-child(2){
+                padding-left:2em;
+            }
+        }
+    }
+    img{
+        width: 100%;
+        height: 120px;
+    }
+}
+
+.order-frame{
+    table.order-bill{
+        tr:first-child td{
+            border:0;
+        }
+        tr{
+            td:first-child{
+                text-transform: uppercase;
+            }
+            td:last-child{
+                text-align: right;
+                color: #ff0000;
+            }
+        }
+    }
+    div.button{
+        display: flex;
+        justify-content: space-between;
+        button{
+            display: block;
+        }
+        .btn-cancel{
+            border: 1px solid #ccc;
+            background: white;
+            padding: 0 10px;
+        }
+        .btn-confirm{
+            text-align: right;
+            background: #ff0000;
+            border: 0;
+            color: white;
+            padding: 5px 15px;
+        }
+    }
+}

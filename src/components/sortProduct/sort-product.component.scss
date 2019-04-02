@@ -1,0 +1,10 @@
+.sort {
+  display: flex;
+  &__by {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  &__show {
+    margin: 0 10px 0 25px;
+  }
+}

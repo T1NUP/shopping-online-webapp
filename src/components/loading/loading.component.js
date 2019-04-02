@@ -1,27 +1,11 @@
 import React, { Component } from 'react';
-import { store } from "../../App";
+import { connect } from "react-redux";
 import './loading.component.scss';
 
-export class LoadingComponent extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: store.getState().loading
-    }
-    this.unsubscribe = store.subscribe(() => {
-      this.setState({
-        loading: store.getState().loading
-      });
-    });
-  }
-
-  componentWillUnmount = () => {
-    this.unsubscribe();
-  }
+class LoadingComponent extends Component {
 
   render() {
-    const showLoading = this.state.loading;
+    const showLoading = this.props.loading;
     if (showLoading) {
       return (
         <div className="loading">
@@ -38,3 +22,11 @@ export class LoadingComponent extends Component {
   }
 
 }
+
+const mapStatesToProps = state => {
+  return {
+    loading: state.loading
+  };
+};
+
+export default connect(mapStatesToProps)(LoadingComponent);

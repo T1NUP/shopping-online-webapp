@@ -1,0 +1,61 @@
+.red {
+  color: red;
+}
+
+h3 {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  color: #3e4d5c;
+  padding-top: 10px;
+}
+
+.form-control {
+  border-radius: 0;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.error-feedback {
+  color: red;
+}
+
+.btn {
+  background-color: #cc3304;
+  border-radius: 0;
+  color: white;
+  text-transform: uppercase;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: darken(#cc3304, 10%);
+    color: white;
+  }
+}
+
+.custom-select {
+  border-radius: 0;
+}
+
+a {
+  color: #767f88;
+
+  &:hover {
+    color: #cc3304;
+    text-decoration: none;
+  }
+}
+
+.form-check-label {
+  margin-left: 20px;
+}
+
+.login {
+  .disable {
+    display: none;
+    visibility: hidden;
+  }
+}

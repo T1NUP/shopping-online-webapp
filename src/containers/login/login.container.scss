@@ -1,0 +1,36 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-form {
+    max-width: 300px;
+  }
+  &-form-forgot {
+    float: right;
+  }
+  &-form-button {
+    width: 100%;
+  }
+  .ant-btn-primary {
+    border-color: #e84d1c;
+    &:hover,
+    &:focus {
+      background-color: #e84d1c;
+      border-color: #e84d1c;
+    }
+  }
+  .error-account {
+    text-align: center;
+    width: 360px;
+    padding: 10px auto;
+    padding: 10px;
+    color: red;
+    margin: 20px -30px;
+    &--none {
+      display: none;
+    }
+  }
+  a {
+    color: #1890ff;
+  }
+}

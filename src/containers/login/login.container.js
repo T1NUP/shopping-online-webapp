@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import "antd/dist/antd.css";
+import "./login.container.scss";
+import { WrappedLoginForm } from "../../components/login/login.component";
 
-export class LoginContainer extends Component {
-
+export default class LoginContainer extends Component {
   render() {
-    return(
-      <h2>This is Login screen</h2>
+    return (
+      <div className="container login">
+        <WrappedLoginForm />
+      </div>
     );
   }
-
 }

@@ -1,0 +1,15 @@
+.star {
+  color: red;
+}
+.btn-checkout3 {
+  color: #fff;
+  background: orangered;
+  float: right;
+  border-radius: 0;
+}
+.btn-checkout3:hover {
+  color: #fff;
+}
+.messCheckout3 {
+  color: red;
+}
