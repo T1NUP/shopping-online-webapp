@@ -11,7 +11,7 @@ import Checkout6 from "./checkout-6/checkout-6.container";
 
 const Panel = Collapse.Panel;
 
-export class CheckOut extends Component {
+class CheckOut extends Component {
   constructor(props) {
     super(props);
   }

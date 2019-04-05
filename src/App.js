@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
-import 'antd/dist/antd.css';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { createStore } from 'redux';
 import { routes } from './router';
 import { Authentication } from './services/authen.service';
-// import { LoginScreen }      from "./containers/login/login";
+import { LOG_IN } from "./actions/actions";
 import { rootReducer } from './reducers/root.reducer';
 import LoadingComponent from './components/loading/loading.component';
+import 'antd/dist/antd.css';
 import './App.scss';
 
 class App extends Component {
-  authen = new Authentication();
+
+  constructor(props) {
+    super(props);
+    if (Authentication.isLoggin()) {
+      store.dispatch({
+        type: LOG_IN
+      });
+    }
+  }
 
   render() {
     return (

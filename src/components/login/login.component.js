@@ -4,8 +4,7 @@ import { http } from "../../services/http.service";
 import { LOG_IN } from "../../actions/actions";
 import { connect } from "react-redux";
 import { Form, Icon, Input, Button, Checkbox } from "antd";
-import { Link, Redirect } from "react-router-dom";
-import { Authentication } from "../../services/authen.service";
+import { Link } from "react-router-dom";
 
 class LoginComponent extends Component {
 
@@ -47,10 +46,6 @@ class LoginComponent extends Component {
     let isErr = false;
     if (this.state.errorAccount !== "") {
       isErr = true;
-    }
-    if (Authentication.isLoggin()) {
-      // console.log('Authentication: ', Authentication.isLoggin());
-      return <Redirect to='/' />
     }
     return (
       <div>

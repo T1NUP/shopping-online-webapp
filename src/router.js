@@ -1,7 +1,7 @@
 import { AccountContainer } from "./containers/account/account.container";
 import { HomeContainer } from "./containers/home/home.container";
 import LoginContainer from "./containers/login/login.container";
-import { HeaderContainer } from "./containers/header/header.container";
+import HeaderContainer from "./containers/header/header.container";
 import { FooterContainer } from "./containers/footer/footer.container";
 import { AsideContainer } from "./containers/aside/aside.container";
 import cartContainer from "./containers/carts/cart.container";
@@ -101,7 +101,7 @@ export const routes = [
     showFooter: true
   },
   {
-    path: `/checkout`,
+    path: "/checkout",
     exact: true,
     component: CheckOut,
     sidebar: AsideContainer,

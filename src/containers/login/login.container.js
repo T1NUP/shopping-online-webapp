@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "antd/dist/antd.css";
 import "./login.container.scss";
 import { WrappedLoginForm } from "../../components/login/login.component";
-import { Authentication } from "../../services/authen.service";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 
