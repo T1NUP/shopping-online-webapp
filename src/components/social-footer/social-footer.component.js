@@ -12,7 +12,7 @@ import {
 } from "react-share";
 class SocialFooterComponent extends Component {
   render() {
-    const shareUrl = window.location;
+    const shareUrl = JSON.stringify(window.location);
     return (
       <div className="Demo__some-network">
         <ul className="social-icons">

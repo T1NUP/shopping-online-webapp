@@ -20,28 +20,13 @@ const HttpConfig = {
 // });
 
 const apiGet = (url, headers = {}) => {
-  store.dispatch({
-    type: SHOW_LOADING,
-    payload: {
-      loading: true
-    }
-  });
+  store.dispatch({ type: SHOW_LOADING });
   return new Promise((resolve, reject) => {
     axios.get(url, Object.assign({}, HttpConfig, headers)).then(data => {
-      store.dispatch({
-        type: HIDE_LOADING,
-        payload: {
-          loading: false
-        }
-      });
+      store.dispatch({ type: HIDE_LOADING });
       resolve(data);
     }, err => {
-      store.dispatch({
-        type: HIDE_LOADING,
-        payload: {
-          loading: false
-        }
-      });
+      store.dispatch({ type: HIDE_LOADING });
       alert('Request fail, please contact with your administration!');
       reject(err);
     });
@@ -49,28 +34,13 @@ const apiGet = (url, headers = {}) => {
 }
 
 const apiPost = (url, params = {}, headers = {}) => {
-  store.dispatch({
-    type: SHOW_LOADING,
-    payload: {
-      loading: true
-    }
-  });
+  store.dispatch({ type: SHOW_LOADING });
   return new Promise((resolve, reject) => {
     axios.post(url, params, Object.assign({}, HttpConfig, headers)).then(data => {
-      store.dispatch({
-        type: HIDE_LOADING,
-        payload: {
-          loading: false
-        }
-      });
+      store.dispatch({ type: HIDE_LOADING });
       resolve(data);
     }, err => {
-      store.dispatch({
-        type: HIDE_LOADING,
-        payload: {
-          loading: false
-        }
-      });
+      store.dispatch({ type: HIDE_LOADING });
       alert('Request fail, please contact with your administration!');
       reject(err);
     });
@@ -78,28 +48,13 @@ const apiPost = (url, params = {}, headers = {}) => {
 }
 
 const apiDelete = (url, headers = {}) => {
-  store.dispatch({
-    type: SHOW_LOADING,
-    payload: {
-      loading: true
-    }
-  });
+  store.dispatch({ type: SHOW_LOADING });
   return new Promise((resolve, reject) => {
     axios.delete(url, Object.assign({}, HttpConfig, headers)).then(data => {
-      store.dispatch({
-        type: HIDE_LOADING,
-        payload: {
-          loading: false
-        }
-      });
+      store.dispatch({ type: HIDE_LOADING });
       resolve(data);
     }, err => {
-      store.dispatch({
-        type: HIDE_LOADING,
-        payload: {
-          loading: false
-        }
-      });
+      store.dispatch({ type: HIDE_LOADING });
       alert('Request fail, please contact with your administration!');
       reject(err);
     });
@@ -108,28 +63,13 @@ const apiDelete = (url, headers = {}) => {
 
 
 const apiPut = (url, params = {}, headers = {}) => {
-  store.dispatch({
-    type: SHOW_LOADING,
-    payload: {
-      loading: true
-    }
-  });
+  store.dispatch({ type: SHOW_LOADING });
   return new Promise((resolve, reject) => {
     axios.put(url, params, Object.assign({}, HttpConfig, headers)).then(data => {
-      store.dispatch({
-        type: HIDE_LOADING,
-        payload: {
-          loading: false
-        }
-      });
+      store.dispatch({ type: HIDE_LOADING });
       resolve(data);
     }, err => {
-      store.dispatch({
-        type: HIDE_LOADING,
-        payload: {
-          loading: false
-        }
-      });
+      store.dispatch({ type: HIDE_LOADING });
       alert('Request fail, please contact with your administration!');
       reject(err);
     });

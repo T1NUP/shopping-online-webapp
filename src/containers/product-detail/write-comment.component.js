@@ -12,8 +12,7 @@ export class WriteComment extends Component {
       submited: false,
       validName: false,
       validEmail: false,
-      validReview: false,
-      validRate: false
+      validReview: false
     };
   }
   handlechange = (e) => {
@@ -54,7 +53,7 @@ export class WriteComment extends Component {
 
   writeCommentSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    console.log('this state when submit:', this.state);
 
 
     this.setState({
@@ -81,7 +80,10 @@ export class WriteComment extends Component {
           email: null,
           review: null,
           rate: 0,
-          validRate: rate > 0 ? true : false,
+          submited: false,
+          validName: false,
+          validEmail: false,
+          validReview: false
         })
       }
     }
@@ -129,10 +131,9 @@ export class WriteComment extends Component {
             <div className="form-group">
               <label>Ratting </label>
               <label
-                className={`star ${(this.state.submited && !this.state.validRate) ? 'border border-danger' : ''} `}
-                onClick={this.handleChangeRate}
+                className={`star ${(this.state.submited && !this.state.rate) ? 'border border-danger' : ''} `}
               >
-                <StarRate onRate={this.onRate} />
+                <StarRate onRate={this.onRate} rated={this.state.rate == 0 ? 0 : this.state.rate} />
               </label>
             </div>
             <button type="submit" className="btn-send" >Send</button>

@@ -20,7 +20,7 @@ export class StarRate extends Component {
     render() {
         return (
             <span>
-                <Rate onChange={this.handleChange} />
+                <Rate onChange={this.handleChange} value={this.props.rated} />
             </span>
         );
     }

@@ -14,9 +14,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     if (Authentication.isLoggin()) {
-      store.dispatch({
-        type: LOG_IN
-      });
+      store.dispatch({ type: LOG_IN });
     }
   }
 
