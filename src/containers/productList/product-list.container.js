@@ -11,6 +11,7 @@ import FilterProductComponent from "../../components/filterProduct/filter-produc
 import BestSellerComponent from "../../components/bestSeller/best-seller.component";
 import PaginationComponent from "../../components/pagination/pagination.component";
 import { BreadcrumbComponent } from "../../components/breadcrumb/breadcrumb.component";
+import SearchComponent from "../../components/search/search.component";
 
 class ProductListContainer extends Component {
   constructor(props) {
@@ -149,19 +150,23 @@ class ProductListContainer extends Component {
         <div className="container">
           <BreadcrumbComponent routes={routes} />
           <div className="row margin-bottom-40">
-            <div className="col-md-3 col-sm-4">
+            <div className="col-lg-3 mobile-none">
               <VerticalCategory />
               <FilterProductComponent avai={avai} stock={stock} />
               <BestSellerComponent />
             </div>
-            <div className="col-md-9 col-sm-8 d-flex flex-wrap">
+            <div className="col-lg-9 ">
+              <div className="product-list__sort">
+                <SearchComponent />
+              </div>
+            
               <div className="product-list__sort">
                 <SortProductComponent />
               </div>
               <div className="product-list__wrap">
                 <div className="product-list__result">
                   {showedProduct.map((val, i) => (
-                    <div className="col-md-4" key={i}>
+                    <div className="col-sm-4" key={i}>
                       <ProductItem
                         inforItem={val}
                         styleWith={"100%"}

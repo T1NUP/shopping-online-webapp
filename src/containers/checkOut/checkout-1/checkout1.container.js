@@ -52,7 +52,7 @@ const CheckOut1Form = ({ values, errors }) => (
       <div className="col-md-6">
         <h3>Returning Customer</h3>
         <p>I am a reurning customer</p>
-        <div className="login">
+        <div className="login-checkout">
           <WrappedLoginForm />
         </div>
 

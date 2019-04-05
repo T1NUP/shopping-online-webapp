@@ -7,7 +7,7 @@ import { AsideContainer } from "./containers/aside/aside.container";
 import cartContainer from "./containers/carts/cart.container";
 import ProductListContainer from "./containers/productList/product-list.container";
 import ProductDetail from "./containers/product-detail/product-detail.container";
-import contactContainer from "./containers/contact/contact.container";
+import contactContainer  from "./containers/contact/contact.container";
 import CheckOut from "./containers/checkOut/checkout.container";
 import RegisterContainer from "./containers/register/register.container";
 
@@ -31,8 +31,8 @@ export const routes = [
     header: HeaderContainer,
     footer: FooterContainer,
     showSidebar: false,
-    showHeader: false,
-    showFooter: false
+    showHeader: true,
+    showFooter: true
   },
   {
     path: "/register",
@@ -82,17 +82,6 @@ export const routes = [
     path: "/product-detail/:id",
     exact: true,
     component: ProductDetail,
-    sidebar: AsideContainer,
-    header: HeaderContainer,
-    footer: FooterContainer,
-    showSidebar: false,
-    showHeader: true,
-    showFooter: true
-  },
-  {
-    path: "/login",
-    exact: true,
-    component: LoginContainer,
     sidebar: AsideContainer,
     header: HeaderContainer,
     footer: FooterContainer,

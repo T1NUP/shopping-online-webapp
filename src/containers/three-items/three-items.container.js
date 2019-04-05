@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { http } from '../../services/http.service';
-import { connect } from 'react-redux';
-import { ProductItem } from '../product-item/product-item.container';
-import { GET_THREE_ITEMS, GET_CART } from '../../actions/actions';
+import React, { Component } from "react";
+import { http } from "../../services/http.service";
+import { connect } from "react-redux";
+import { ProductItem } from "../product-item/product-item.container";
+import { GET_THREE_ITEMS, GET_CART } from "../../actions/actions";
 
 class ThreeItems extends Component {
   constructor(props) {
@@ -16,13 +16,13 @@ class ThreeItems extends Component {
   };
 
   getThreeItems() {
-    http.get('three-items').then(res => {
+    http.get("three-items").then(res => {
       this.props.getThreeItems(res.data);
     });
   }
   fillIndex = id => {
-    var { threeItems } = this.props;
-    var result = -1;
+    let { threeItems } = this.props;
+    let result = -1;
     threeItems.forEach((threeItem, index) => {
       if (threeItem.id === id) {
         result = index;
@@ -31,15 +31,15 @@ class ThreeItems extends Component {
     return result;
   };
   addToCart = id => {
-    var { threeItems } = this.props;
-    var index = this.fillIndex(id);
+    let { threeItems } = this.props;
+    let index = this.fillIndex(id);
     if (index !== -1) {
       threeItems[index].quantity = 1;
-      http.post('carts', threeItems[index]).then(res => {});
-      http.get('carts').then(res => {
-        this.props.addToCart(res.data);
-      });
+      http.post("carts", threeItems[index]).then(res => {});
     }
+    http.get("carts").then(res => {
+      this.props.addToCart(res.data);
+    });
   };
   render() {
     return (
@@ -50,7 +50,7 @@ class ThreeItems extends Component {
             <ProductItem
               inforItem={val}
               key={i}
-              styleWith={'33.3333%'}
+              styleWith={"33.3333%"}
               addToCart={this.addToCart}
             />
           ))}

@@ -54,6 +54,8 @@
   }
   &__result {
     margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
   }
   &__none {
     padding: 20px;
@@ -74,5 +76,10 @@
   .best-seller {
     padding: 15px;
     margin-bottom: 25px;
+  }
+  .mobile-none {
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
   }
 }

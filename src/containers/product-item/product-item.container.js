@@ -63,7 +63,7 @@ export class ProductItem extends Component {
                   Zoom
                 </a>
                 <Link
-                  to={{ pathname: `product-detail/${this.props.inforItem.id}` }}
+                  to={{ pathname: `/product-detail/${this.props.inforItem.id}` }}
                   className="btn btn-default fancybox-fast-view"
                 >
                   View

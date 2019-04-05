@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { http } from '../../services/http.service';
-import { connect } from 'react-redux';
-import { ProductItem } from '../product-item/product-item.container';
-import { GET_TWO_ITEMS, GET_CART } from '../../actions/actions';
+import React, { Component } from "react";
+import { http } from "../../services/http.service";
+import { connect } from "react-redux";
+import { ProductItem } from "../product-item/product-item.container";
+import { GET_TWO_ITEMS, GET_CART } from "../../actions/actions";
 
 class TwoItems extends Component {
   constructor(props) {
@@ -15,8 +15,8 @@ class TwoItems extends Component {
     this.getTwoItems();
   };
   fillIndex = id => {
-    var { twoItems } = this.props;
-    var result = -1;
+    let { twoItems } = this.props;
+    let result = -1;
     twoItems.forEach((twoItem, index) => {
       if (twoItem.id === id) {
         result = index;
@@ -25,18 +25,18 @@ class TwoItems extends Component {
     return result;
   };
   addToCart = id => {
-    var { twoItems } = this.props;
-    var index = this.fillIndex(id);
+    let { twoItems } = this.props;
+    let index = this.fillIndex(id);
     if (index !== -1) {
       twoItems[index].quantity = 1;
-      http.post('carts', twoItems[index]).then(res => {});
-      http.get('carts').then(res => {
-        this.props.addToCart(res.data);
-      });
+      http.post("carts", twoItems[index]).then(res => {});
     }
+    http.get("carts").then(res => {
+      this.props.addToCart(res.data);
+    });
   };
   getTwoItems() {
-    http.get('two-items').then(res => {
+    http.get("two-items").then(res => {
       this.props.getTwoItems(res.data);
     });
   }
@@ -49,7 +49,7 @@ class TwoItems extends Component {
             <ProductItem
               inforItem={val}
               key={i}
-              styleWith={'50%'}
+              styleWith={"50%"}
               addToCart={this.addToCart}
             />
           ))}

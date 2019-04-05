@@ -1,55 +1,56 @@
 import React, { Component } from "react";
 import "antd/dist/antd.css";
 import { http } from "../../services/http.service";
-import { GET_ACCOUNT, LOG_IN } from "../../actions/actions";
+import { LOG_IN } from "../../actions/actions";
 import { connect } from "react-redux";
 import { Form, Icon, Input, Button, Checkbox } from "antd";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import { Authentication } from "../../services/authen.service";
 
-export class LoginComponent extends Component {
+class LoginComponent extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
-      accounts: [],
-      errorAccount: ""
+      errorAccount: "",
+      isValid: false
     };
   }
-
-  componentDidMount() {
-    this.newAccounts();
-  }
-  newAccounts = () => {
-    http.get("accounts").then(res => {
-      this.setState({
-        accounts: res.data
-      });
-      // this.props.newAccounts(res.data);
-    });
-  };
   handleSubmit = e => {
     e.preventDefault();
-    this.newAccounts();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        let user = this.state.accounts.filter(account => {
-          return (
-            account.email === values.userName &&
-            account.password === values.password
-          );
+        http.get("accounts").then(res => {
+          let user = res.data.filter(account => {
+            return (
+              account.email === values.userName &&
+              account.password === values.password
+            );
+          });
+          if (user.length > 0) {
+            // save token to localStorage
+            localStorage.setItem('token', 'ghjsnewwtaxajfsiuwrw9873ksdfs');
+            // save token expire in
+            const duration = 1/120; // 30s
+            localStorage.setItem('expire', new Date().getTime() + duration*60*60*1000);
+            this.props.login();
+          } else {
+            this.setState({ errorAccount: "Invalid Email or Password" });
+          }
         });
-        if (user.length > 0) {
-          window.location.href = "/";
-        } else {
-          this.setState({ errorAccount: "Invalid Email or Password" });
-        }
       }
     });
   };
+
   render() {
     const { getFieldDecorator } = this.props.form;
     let isErr = false;
     if (this.state.errorAccount !== "") {
       isErr = true;
+    }
+    if (Authentication.isLoggin()) {
+      // console.log('Authentication: ', Authentication.isLoggin());
+      return <Redirect to='/' />
     }
     return (
       <div>
@@ -120,22 +121,15 @@ export class LoginComponent extends Component {
     );
   }
 }
-const mapStatesToProps = state => {
-  return {
-    accounts: state.accounts
-  };
-};
+
 const mapDispatchToProps = dispatch => {
   return {
-    newAccounts: response =>
-      dispatch({ type: GET_ACCOUNT, payload: { accounts: response } })
+    login: () => {
+      dispatch({type: LOG_IN});
+    }
   };
 };
-export default connect(
-  mapStatesToProps,
-  mapDispatchToProps
-)(LoginComponent);
 
-export const WrappedLoginForm = Form.create({ name: "normal_login" })(
-  LoginComponent
-);
+export default connect(null, mapDispatchToProps)(LoginComponent);
+
+export const WrappedLoginForm = Form.create({ name: "normal_login" })(connect(null, mapDispatchToProps)(LoginComponent));

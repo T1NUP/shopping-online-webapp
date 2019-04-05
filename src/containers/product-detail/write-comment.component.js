@@ -8,11 +8,12 @@ export class WriteComment extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      rate: 5,
+      rate: 0,
       submited: false,
       validName: false,
       validEmail: false,
-      validReview: false
+      validReview: false,
+      validRate: false
     };
   }
   handlechange = (e) => {
@@ -44,16 +45,24 @@ export class WriteComment extends Component {
     e.preventDefault();
   }
 
+  handleChangeRate = (e) => {
+    this.setState({
+      validRate: this.state.rate > 0 ? true : false
+    })
+    console.log(this.state);
+  }
+
   writeCommentSubmit = (e) => {
     e.preventDefault();
+    console.log(this.state);
 
 
     this.setState({
       submited: true
     })
-    var { nameC, email, review, validName, validEmail, validReview } = this.state;
+    var { nameC, email, review, rate, validName, validEmail, validReview } = this.state;
 
-    if (!nameC || !email || !review) {
+    if (!nameC || !email || !review || !rate) {
       alert('Moi nhap day du thong tin');
     } else {
       if (validName && validEmail && validReview) {
@@ -67,9 +76,15 @@ export class WriteComment extends Component {
         }
         this.props.handleSubmit(comment);
         e.target.reset();
+        this.setState({
+          nameC: null,
+          email: null,
+          review: null,
+          rate: 0,
+          validRate: rate > 0 ? true : false,
+        })
       }
     }
-
   }
 
   onRate = (params) => {
@@ -113,7 +128,10 @@ export class WriteComment extends Component {
             </div>
             <div className="form-group">
               <label>Ratting </label>
-              <label className="star">
+              <label
+                className={`star ${(this.state.submited && !this.state.validRate) ? 'border border-danger' : ''} `}
+                onClick={this.handleChangeRate}
+              >
                 <StarRate onRate={this.onRate} />
               </label>
             </div>

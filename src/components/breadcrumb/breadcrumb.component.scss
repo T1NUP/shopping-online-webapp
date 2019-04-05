@@ -1,16 +1,19 @@
 .breadcrumb {
   background: none;
-  .ant-breadcrumb-link {
+  .ant-breadcrumb-link * {
     text-transform: uppercase;
     color: #5f6d7b;
-    font-family: 'PT Sans - Narrow';
-    font-size: 13px;
+    font: 13px "PT Sans Narrow", sans-serif;
     font-weight: 400;
     letter-spacing: 0.39px;
+    &:hover {
+      color: #e6400c;
+      text-decoration: underline;
+    }
   }
   .ant-breadcrumb {
     span:last-child {
-      .ant-breadcrumb-link {
+      .ant-breadcrumb-link * {
         color: #e6400c;
       }
     }

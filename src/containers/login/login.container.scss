@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 30px;
   &-form {
-    max-width: 300px;
+    width: 300px;
   }
   &-form-forgot {
     float: right;
@@ -20,6 +21,7 @@
     }
   }
   .error-account {
+    background-color: pink;
     text-align: center;
     width: 360px;
     padding: 10px auto;
@@ -32,5 +34,8 @@
   }
   a {
     color: #1890ff;
+  }
+  .d-none {
+    display: none;
   }
 }

@@ -2,8 +2,8 @@ import { http } from './http.service';
 
 export class Authentication {
   
-  isLoggin = () => {
-	  return true;
+  static isLoggin = () => {
+    return localStorage.getItem('token') ? true : false;
   }
 
   refreshToken = () => {

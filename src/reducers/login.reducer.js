@@ -1,9 +1,13 @@
-import { LOG_IN } from "../actions/actions";
+import { LOG_IN, LOG_OUT } from "../actions/actions";
 
-export const login = (state = {}, action) => {
+export const isLogin = (state = false, action) => {
   switch (action.type) {
     case LOG_IN:
-      return [...action.payload.login];
+      return true;
+    
+    case LOG_OUT:
+      return false;
+    
     default:
       return state;
   }

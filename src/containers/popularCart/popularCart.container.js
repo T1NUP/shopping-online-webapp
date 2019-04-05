@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import { http } from '../../services/http.service';
-import { GET_NEW_POPULAR, GET_CART } from '../../actions/actions';
-import { connect } from 'react-redux';
-import { ProductItem } from '../product-item/product-item.container';
+import React, { Component } from "react";
+import { http } from "../../services/http.service";
+import { GET_NEW_POPULAR, GET_CART } from "../../actions/actions";
+import { connect } from "react-redux";
+import { ProductItem } from "../product-item/product-item.container";
 class PopularCart extends Component {
-
   componentDidMount() {
     this.getNewPopular();
   }
@@ -24,14 +23,14 @@ class PopularCart extends Component {
 
     if (index !== -1) {
       newPopular[index].quantity = 1;
-      http.post('carts', newPopular[index]).then(res => { });
-      http.get('carts').then(res => {
-        this.props.addToCart(res.data);
-      });
+      http.post("carts", newPopular[index]).then(res => {});
     }
+    http.get("carts").then(res => {
+      this.props.addToCart(res.data);
+    });
   };
   getNewPopular = () => {
-    http.get('popular-products').then(res => {
+    http.get("popular-products").then(res => {
       this.props.getNewPopular(res.data);
     });
   };
@@ -46,7 +45,7 @@ class PopularCart extends Component {
                 <div className="col-md-3 col-sm-3 col-xs-3" key={i}>
                   <ProductItem
                     inforItem={val}
-                    styleWith={'100%'}
+                    styleWith={"100%"}
                     addToCart={this.addToCart}
                   />
                 </div>

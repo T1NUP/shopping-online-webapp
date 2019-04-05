@@ -13,6 +13,7 @@ export class StarRate extends Component {
 
 
     handleChange = (e) => {
+        console.log(e);
         this.props.onRate(e);
     }
 

@@ -13,9 +13,10 @@ import { filter } from "./filter.reducer";
 import { pagination } from "./pagination.reducer";
 import { productDetail } from "./product-detail.reducer";
 import { accounts } from "./account.reducer";
-import { login } from "./login.reducer";
+import { isLogin } from "./login.reducer";
 import { abouts } from "./aboutFooter.reducer";
 import { contacts } from "./contactFooter.reducer";
+import { bestSellers } from "./bestSeller.reducer";
 export const rootReducer = combineReducers({
   loading,
   products,
@@ -31,7 +32,8 @@ export const rootReducer = combineReducers({
   pagination,
   productDetail,
   accounts,
-  login,
+  isLogin,
   abouts,
-  contacts
+  contacts,
+  bestSellers
 });

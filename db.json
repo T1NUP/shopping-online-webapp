@@ -8,10 +8,23 @@
       "category": "jacket",
       "availability": "in stock",
       "cost": 23,
-      "arrImage": ["k1", "k2", "k3"],
+      "arrImage": [
+        "k1",
+        "k2",
+        "k3"
+      ],
       "valueSale": 0,
-      "size": ["S", "M", "L", "XL"],
-      "color": ["red", "yellow", "green"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "comments": [
@@ -59,16 +72,26 @@
     },
     {
       "id": "22dsss23fs",
-      "productName": "black jacket",
+      "productName": "Berry Lace Dress4",
       "nameImage": "model3",
       "type": "sale",
       "category": "jacket",
       "availability": "not available",
       "cost": 45,
-      "arrImage": ["k1", "k2", "k3"],
+      "arrImage": [
+        "k1",
+        "k2",
+        "k3"
+      ],
       "valueSale": 10,
-      "size": ["S", "M"],
-      "color": ["red", "green"],
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "red",
+        "green"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "comments": [
@@ -84,16 +107,25 @@
     },
     {
       "id": "22dsssbd6",
-      "productName": "black jacket",
+      "productName": "black jacket 1",
       "nameImage": "model4",
       "type": "sale",
       "category": "jacket",
       "availability": "in stock",
       "cost": 43,
-      "arrImage": ["k1", "k2", "k3"],
+      "arrImage": [
+        "k1",
+        "k2",
+        "k3"
+      ],
       "valueSale": 50,
-      "size": ["L", "XL"],
-      "color": ["red"],
+      "size": [
+        "L",
+        "XL"
+      ],
+      "color": [
+        "red"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "comments": [
@@ -123,10 +155,23 @@
       "availability": "not available",
       "type": "new",
       "cost": 15,
-      "arrImage": ["k1", "k2", "k3"],
+      "arrImage": [
+        "k1",
+        "k2",
+        "k3"
+      ],
       "valueSale": 0,
-      "size": ["S", "M", "L", "XL"],
-      "color": ["red", "yellow", "green"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "comments": [
@@ -174,16 +219,29 @@
     },
     {
       "id": "22dsss888",
-      "productName": "black jacket",
+      "productName": "black jacket abc",
       "nameImage": "model6",
       "type": "sale",
       "category": "jacket",
       "availability": "not available",
       "cost": 70,
-      "arrImage": ["k1", "k2", "k3"],
+      "arrImage": [
+        "k1",
+        "k2",
+        "k3"
+      ],
       "valueSale": 15,
-      "size": ["S", "M", "L", "XL"],
-      "color": ["red", "yellow", "green"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "comments": [
@@ -221,10 +279,23 @@
       "availability": "in stock",
       "type": "new",
       "cost": 50,
-      "arrImage": ["k1", "k2", "k3"],
+      "arrImage": [
+        "k1",
+        "k2",
+        "k3"
+      ],
       "valueSale": 0,
-      "size": ["S", "M", "L", "XL"],
-      "color": ["red", "yellow", "green"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "comments": [
@@ -246,10 +317,23 @@
       "type": "sale",
       "cost": 123,
       "id": "22dsss1010",
-      "arrImage": ["k1", "k2", "k3"],
+      "arrImage": [
+        "k1",
+        "k2",
+        "k3"
+      ],
       "valueSale": 30,
-      "size": ["S", "M", "L", "XL"],
-      "color": ["red", "yellow", "green"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "comments": []
@@ -262,10 +346,23 @@
       "type": "sale",
       "cost": 53,
       "id": "22dsss1111",
-      "arrImage": ["k1", "k2", "k3"],
+      "arrImage": [
+        "k1",
+        "k2",
+        "k3"
+      ],
       "valueSale": 10,
-      "size": ["S", "M", "L", "XL"],
-      "color": ["red", "yellow", "green"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "comments": []
@@ -278,10 +375,23 @@
       "nameImage": "model2",
       "type": "sale",
       "cost": 53,
-      "arrImage": ["k1", "k2", "k3"],
+      "arrImage": [
+        "k1",
+        "k2",
+        "k3"
+      ],
       "valueSale": 10,
-      "size": ["S", "M", "L", "XL"],
-      "color": ["red", "yellow", "green"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "comments": []
@@ -402,10 +512,23 @@
       "type": "sale",
       "cost": 53,
       "id": "22dsss1111",
-      "arrImage": ["k1", "k2", "k3"],
+      "arrImage": [
+        "k1",
+        "k2",
+        "k3"
+      ],
       "valueSale": 10,
-      "size": ["S", "M", "L", "XL"],
-      "color": ["red", "yellow", "green"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "comments": [],
@@ -419,10 +542,23 @@
       "category": "jacket",
       "availability": "not available",
       "cost": 70,
-      "arrImage": ["k1", "k2", "k3"],
+      "arrImage": [
+        "k1",
+        "k2",
+        "k3"
+      ],
       "valueSale": 15,
-      "size": ["S", "M", "L", "XL"],
-      "color": ["red", "yellow", "green"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "red",
+        "yellow",
+        "green"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda est sapiente at alias ipsa amet explicabo dolor eveniet! Veritatis est deleniti nihil pariatur cupiditate sunt accusantium temporibus, tempora culpa?",
       "comments": [
@@ -490,16 +626,57 @@
   ],
   "contacts": [
     {
-      "id": "123xgee",
-      "address": "35, Lorem Lis Street, Park Ave  ",
-      "country": "California, US",
-      "phone": "300 323 3456",
-      "fax": "300 323 1456",
-      "email": "info@metronic.com",
-      "skype": " metronic"
+      "name": "sad",
+      "email": "sad",
+      "message": "asd",
+      "id": 1
     }
   ],
   "token": {
     "token": "my-token"
-  }
+  },
+  "best-sellers": [
+    {
+      "id": "22dsssdcx23",
+      "nameImage": "k1",
+      "type": "new",
+      "productName": "Berry Lace Dress",
+      "cost": 500
+    },
+    {
+      "id": "22dssssa2323",
+      "nameImage": "k2",
+      "type": "",
+      "productName": "Berry Lace Dress2",
+      "cost": 399
+    },
+    {
+      "id": "22dsss5156565",
+      "nameImage": "k3",
+      "type": "",
+      "productName": "Berry Lace Dress3",
+      "cost": 90
+    },
+    {
+      "id": "22dsssdcx24",
+      "nameImage": "k1",
+      "type": "new",
+      "productName": "Berry Lace Dress3",
+      "cost": 123
+    },
+    {
+      "id": "22dssssa2325",
+      "nameImage": "k2",
+      "type": "",
+      "productName": "Berry Lace Dress4",
+      "cost": 435
+    },
+    {
+      "id": "22dsss5156566",
+      "nameImage": "k3",
+      "type": "",
+      "productName": "Berry Lace Dress6",
+      "cost": 909
+    }
+  ]
 }

@@ -1,0 +1,72 @@
+.img-avatar{
+    figure {
+        background-repeat: no-repeat;
+        background-size:200% 200%;
+      }
+      
+      figure:hover img {
+        opacity: 0;
+      }
+  }
+.ant-modal{
+    top: 1em;
+}
+
+.gallery-modal{
+    
+    .ant-modal-content{
+        width: 80%;
+        margin: 0 auto;
+        .ant-modal-footer{
+            display: none;
+        }
+        i.ant-modal-close-icon{
+            border: 2px solid white;
+            border-radius: 50%;
+            padding: 5px;
+            color: white;
+            font-size: 60%;
+            background: #444;
+            position: absolute;
+            top: -20%;
+            right: -20%;
+            box-shadow: 0px 0px 5px 0px black;
+        }
+        & .ant-modal-body{
+            padding: 15px;
+
+            .anticon {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                justify-content: center;
+                padding: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 150%;
+                color: white;
+                & svg {
+                    display: none;
+                }
+                &:hover svg {
+                    fill: #444;
+                    display: inline-block;
+                }
+            }
+            
+            .anticon-right-circle{
+                right:0;
+            }
+            .anticon-left-circle{
+                left: 0;
+                z-index: 1;
+            }
+            ul.slick-dots{
+                display: none !important;
+            }
+        }
+    }
+    
+}
+

@@ -4,8 +4,9 @@ import "./contact.scss";
 import { VerticalCategory } from "./vertical-category/vertical-category.container";
 import { BreadcrumbComponent } from "./breadcrum/breadcrumb.component";
 import GoogleMapComponent from "./google-map/google-map.container";
+import { http } from "../../services/http.service";
 
-class ContactComponent extends Component {
+export default class ContactComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,7 +23,11 @@ class ContactComponent extends Component {
       email: this.state.email,
       message: this.state.message
     };
-    console.log(form);
+
+    http.post("contacts",form).then(res => {
+      window.alert('POST Success !');
+      console.log(res);
+    })
   };
 
   handleChange = e => {
@@ -113,15 +118,3 @@ class ContactComponent extends Component {
     );
   }
 }
-
-const mapStateToProps = state => {
-  return {};
-};
-
-const mapDispatchToProps = dispatch => {
-  return {};
-};
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ContactComponent);

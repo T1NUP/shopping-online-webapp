@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import FormFooterComponent from "../../components/form-footer/form-footer.component";
 import AboutFooterComponent from "../../components/about-footer/about-footer.component";
 import ContactFooterComponent from "../../components/contact-footer/contact-footer.component";
+import SocialFooterComponent from "../../components/social-footer/social-footer.component";
 export class FooterContainer extends Component {
   render() {
     return (
@@ -178,7 +179,7 @@ export class FooterContainer extends Component {
               {/* <!-- BEGIN TWITTER BLOCK -->  */}
               <div className="col-md-3 col-sm-6 pre-footer-col">
                 <h2 className="margin-bottom-0">Latest Tweets</h2>
-                <blockquote class="twitter-tweet" data-lang="vi">
+                <blockquote className="twitter-tweet" data-lang="vi">
                   <p lang="en" dir="ltr">
                     The essential guide to Maroon 5{" "}
                     <a href="https://t.co/eOhKzyoOyR">
@@ -193,7 +194,6 @@ export class FooterContainer extends Component {
                 <script
                   async
                   src="https://platform.twitter.com/widgets.js"
-                  charset="utf-8"
                 />
               </div>
               {/* <!-- END TWITTER BLOCK --> */}
@@ -208,60 +208,7 @@ export class FooterContainer extends Component {
             <div className="row">
               {/* <!-- BEGIN SOCIAL ICONS --> */}
               <div className="col-md-6 col-sm-6">
-                <ul className="social-icons">
-                  <li>
-                    <Link className="rss" data-original-title="rss" to="/" />
-                  </li>
-                  <li>
-                    <Link
-                      className="facebook"
-                      data-original-title="facebook"
-                      to="/"
-                    />
-                  </li>
-                  <li>
-                    <Link
-                      className="twitter"
-                      data-original-title="twitter"
-                      to="/"
-                    />
-                  </li>
-                  <li>
-                    <Link
-                      className="googleplus"
-                      data-original-title="googleplus"
-                      to="/"
-                    />
-                  </li>
-                  <li>
-                    <Link
-                      className="linkedin"
-                      data-original-title="linkedin"
-                      to="/"
-                    />
-                  </li>
-                  <li>
-                    <Link
-                      className="youtube"
-                      data-original-title="youtube"
-                      to="/"
-                    />
-                  </li>
-                  <li>
-                    <Link
-                      className="vimeo"
-                      data-original-title="vimeo"
-                      to="/"
-                    />
-                  </li>
-                  <li>
-                    <Link
-                      className="skype"
-                      data-original-title="skype"
-                      to="/"
-                    />
-                  </li>
-                </ul>
+               <SocialFooterComponent />
               </div>
               {/* <!-- END SOCIAL ICONS --> */}
               {/* <!-- BEGIN NEWLETTER --> */}

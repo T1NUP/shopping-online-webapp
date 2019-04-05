@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { http } from '../../services/http.service';
-import { GET_NEW_ARRIVALS, GET_CART } from '../../actions/actions';
-import { ProductItem } from '../product-item/product-item.container';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { http } from "../../services/http.service";
+import { GET_NEW_ARRIVALS, GET_CART } from "../../actions/actions";
+import { ProductItem } from "../product-item/product-item.container";
+import { connect } from "react-redux";
 
 class NewArrivals extends Component {
   constructor(props) {
@@ -16,8 +16,8 @@ class NewArrivals extends Component {
     this.getNewArrivals();
   };
   fillIndex = id => {
-    var { newArrivals } = this.props;
-    var result = -1;
+    let { newArrivals } = this.props;
+    let result = -1;
     newArrivals.forEach((newArrival, index) => {
       if (newArrival.id === id) {
         result = index;
@@ -27,18 +27,18 @@ class NewArrivals extends Component {
   };
   addToCart = id => {
     console.log(id);
-    var { newArrivals } = this.props;
-    var index = this.fillIndex(id);
+    let { newArrivals } = this.props;
+    let index = this.fillIndex(id);
     if (index !== -1) {
       newArrivals[index].quantity = 1;
-      http.post('carts', newArrivals[index]).then(res => { });
-      http.get('carts').then(res => {
-        this.props.addToCart(res.data);
-      });
+      http.post("carts", newArrivals[index]).then(res => {});
     }
+    http.get("carts").then(res => {
+      this.props.addToCart(res.data);
+    });
   };
   getNewArrivals = () => {
-    http.get('new-arrivals').then(res => {
+    http.get("new-arrivals").then(res => {
       this.props.getNewArrivals(res.data);
     });
   };
@@ -52,7 +52,7 @@ class NewArrivals extends Component {
               <ProductItem
                 inforItem={val}
                 key={i}
-                styleWith={'20%'}
+                styleWith={"20%"}
                 addToCart={this.addToCart}
               />
             ))}

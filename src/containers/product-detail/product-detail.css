@@ -51,6 +51,8 @@
   top: 0;
   left: 0;
 }
+
+/* style gallery */
 .images-product .img-avatar img {
   width: 100%;
 }
@@ -65,6 +67,12 @@
   padding-right: 10px;
   height: 100px;
 }
+
+
+
+/* end style gallery */
+
+
 .tab-bar {
   margin-top: 50px;
 }
@@ -73,7 +81,7 @@
 }
 
 .btn-send {
-  border: 1px solid red;
+  border: 1px solid #e6400c;
   background: #e6400c;
   color: white;
   text-transform: uppercase;
