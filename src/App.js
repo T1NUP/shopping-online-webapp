@@ -14,7 +14,23 @@ class App extends Component {
   constructor(props) {
     super(props);
     if (Authentication.isLoggin()) {
-      store.dispatch({ type: LOG_IN });
+      if (Authentication.isTokenExpired()) {
+        console.log('token is expired!');
+        // refresh token here
+        Authentication.refreshToken().then(res => {
+          console.log('Refreshing token...');
+          Authentication.saveTokenToLocal(res.data.token).then(token => {
+            console.log('New token: ', token);
+            store.dispatch({ type: LOG_IN });
+          }).catch(err => {
+            console.log("Error: ", err);
+          });
+        });
+      } else {
+        console.log('token is valid!');
+        store.dispatch({ type: LOG_IN });
+      }
+      
     }
   }
 

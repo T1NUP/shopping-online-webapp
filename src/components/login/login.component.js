@@ -1,20 +1,30 @@
 import React, { Component } from "react";
 import "antd/dist/antd.css";
 import { http } from "../../services/http.service";
-import { LOG_IN } from "../../actions/actions";
+import { LOG_IN, GET_ACCOUNT } from "../../actions/actions";
 import { connect } from "react-redux";
 import { Form, Icon, Input, Button, Checkbox } from "antd";
 import { Link } from "react-router-dom";
+import { CONFIG } from "../../services/config.service";
+import { Authentication } from "../../services/authen.service";
 
 class LoginComponent extends Component {
-
   constructor(props) {
+    console.log("props: ", props);
     super(props);
     this.state = {
       errorAccount: "",
       isValid: false
     };
   }
+  componentDidMount() {
+    this.newAccounts();
+  }
+  newAccounts = () => {
+    http.get("accounts").then(res => {
+      this.props.newAccounts(res.data);
+    });
+  };
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -27,12 +37,7 @@ class LoginComponent extends Component {
             );
           });
           if (user.length > 0) {
-            // save token to localStorage
-            localStorage.setItem('token', 'ghjsnewwtaxajfsiuwrw9873ksdfs');
-            // save token expire in
-            const duration = 1/120; // 30s
-            localStorage.setItem('expire', new Date().getTime() + duration*60*60*1000);
-            this.props.login();
+            Authentication.loggin();
           } else {
             this.setState({ errorAccount: "Invalid Email or Password" });
           }
@@ -49,7 +54,9 @@ class LoginComponent extends Component {
     }
     return (
       <div>
-        <div className="error-account">{this.state.errorAccount}</div>
+        <div className={isErr ? "error-account" : "d-none"}>
+          {this.state.errorAccount}
+        </div>
         <Form onSubmit={this.handleSubmit} className="login-form">
           <Form.Item hasFeedback>
             {getFieldDecorator("userName", {
@@ -117,14 +124,4 @@ class LoginComponent extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    login: () => {
-      dispatch({type: LOG_IN});
-    }
-  };
-};
-
-export default connect(null, mapDispatchToProps)(LoginComponent);
-
-export const WrappedLoginForm = Form.create({ name: "normal_login" })(connect(null, mapDispatchToProps)(LoginComponent));
+export const WrappedLoginForm = Form.create({ name: "normal_login" })(LoginComponent);

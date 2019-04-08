@@ -3,15 +3,13 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import CartHeader from "../cart-header/cart-header.container";
 import HeaderNavComponent from "../../components/header-nav/header-nav.component";
-import { LOG_OUT } from "../../actions/actions";
+import { Authentication } from "../../services/authen.service";
 
 class HeaderContainer extends Component {
 
 
-  logout = (event) => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('expire');
-    this.props.logout();
+  logout = () => {
+    Authentication.logout();
   }
 
   render() {
@@ -75,14 +73,8 @@ class HeaderContainer extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return { isLogin: state.isLogin }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    logout: () => dispatch({ type: LOG_OUT })
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderContainer);
+export default connect(mapStateToProps, null)(HeaderContainer);

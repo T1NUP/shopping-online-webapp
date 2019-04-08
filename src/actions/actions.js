@@ -1,8 +1,8 @@
 // demo api
-export const GET_API    = "GET_API";
-export const POST_API   = "POST_API";
+export const GET_API = "GET_API";
+export const POST_API = "POST_API";
 export const DELETE_API = "DELETE_API";
-export const PUT_API    = "PUT_API";
+export const PUT_API = "PUT_API";
 
 // demo inc/dec value
 export const INCREASE = "INCREASE";
@@ -33,8 +33,8 @@ export const SHOW = "SHOW";
 
 // filter products
 export const GET_NOT_AVAILABLE = "GET_NOT_AVAILABLE";
-export const GET_IN_STOCK      = "GET_IN_STOCK";
-export const RANGE             = "RANGE";
+export const GET_IN_STOCK = "GET_IN_STOCK";
+export const RANGE = "RANGE";
 
 // pagination
 export const PAGINATION = "PAGINATION";
@@ -59,5 +59,8 @@ export const SEARCH = "SEARCH";
 export const GET_BEST_SELLER = "GET_BEST_SELLER";
 
 // LOG IN
-export const LOG_IN  = "LOG_IN";
+export const LOG_IN = "LOG_IN";
 export const LOG_OUT = "LOG_OUT";
+
+// register
+export const REGISTER = "REGISTER";

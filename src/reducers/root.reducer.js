@@ -17,6 +17,8 @@ import { isLogin } from "./login.reducer";
 import { abouts } from "./aboutFooter.reducer";
 import { contacts } from "./contactFooter.reducer";
 import { bestSellers } from "./bestSeller.reducer";
+import { register } from "./register.reducer";
+
 export const rootReducer = combineReducers({
   loading,
   products,
@@ -35,5 +37,6 @@ export const rootReducer = combineReducers({
   isLogin,
   abouts,
   contacts,
-  bestSellers
+  bestSellers,
+  register
 });

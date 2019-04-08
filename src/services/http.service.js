@@ -3,10 +3,9 @@ import { store } from '../App';
 import { SHOW_LOADING, HIDE_LOADING } from '../actions/actions';
 
 const getHeaders = () => {
-  let token = localStorage.getItem('token');
   return {
     'Content-Type': 'application/json',
-    'Authorization': `Bearer ${token}`,
+    'Authorization': `Bearer ${localStorage.getItem('token')}`,
   }
 }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Carousel, Icon } from 'antd';
+
 import './gallery.component.scss';
 
 export class Gallery extends Component {
@@ -11,7 +12,7 @@ export class Gallery extends Component {
       currentImage: null,
       visible: false,
       backgroundImage: ``,
-      backgroundPosition: '-10% -10%',
+      transformOrigin: '0% 0%'
     }
     this.carousel = React.createRef();
   }
@@ -42,25 +43,21 @@ export class Gallery extends Component {
     });
   }
 
-
-  setStyleThumbnail = () => {
-    return {
-      width: '100%',
-    }
-  }
-
   handleMouseMove = e => {
-    const { left, top, width, height } = e.target.getBoundingClientRect();
+
+    var divImgAvatar = document.querySelector('.img-avatar').getBoundingClientRect();
+    const { left, top, width, height } = divImgAvatar;
+
 
     const x = ((e.pageX - left) / width) * 100;
-    const y = ((e.pageY - top) / height) * 100;
-    // console.log(e.target.getBoundingClientRect());
-    console.log(e.pageX, e.pageY, x, y);
+    const y = ((e.pageY - top - 200) / height) * 100;
+
     this.setState({
       backgroundImage: `url('/assets/pages/img/products/${this.props.currentImage}.jpg')`,
-      backgroundPosition: `${x}% ${y}%`
+      transformOrigin: `${x}% ${y}%`
     });
   };
+
 
   render() {
     var { images, currentImage } = this.props;
@@ -71,10 +68,14 @@ export class Gallery extends Component {
     };
     return (
       <>
-        <div className="img-avatar">
-          <figure onMouseMove={this.handleMouseMove} style={this.state}>
+        <div className="img-avatar" onMouseMove={this.handleMouseMove}>
+          <div
+            className="figure"
+
+            style={this.state}
+          >
             <img src={`/assets/pages/img/products/${currentImage}.jpg`} />
-          </figure>
+          </div>
         </div>
 
 
@@ -105,8 +106,6 @@ export class Gallery extends Component {
             </Modal>
           </div>
         </div>
-
-
       </>
     );
   }

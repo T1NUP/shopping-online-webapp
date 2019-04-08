@@ -1,3 +1,40 @@
 .errorMsg {
-    color: red;
+  color: red;
+}
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  .ant-form {
+    width: 400px;
+    &-item {
+      margin-bottom: 15px;
+      &-label {
+        line-height: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .ant-calendar-picker {
+    width: 400px;
+  }
+  .ant-btn-primary {
+    width: 100%;
+    text-transform: uppercase;
+    border-color: #e84d1c;
+    &:hover,
+    &:focus {
+      background-color: #e84d1c;
+      border-color: #e84d1c;
+    }
+  }
+  .ant-checkbox-wrapper {
+    a {
+      color: #e84d1c;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
